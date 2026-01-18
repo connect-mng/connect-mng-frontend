@@ -49,6 +49,7 @@
 
 .profileContent div {
   font-size: calc(0.1rem + 1.1vw);
+  color: #96b271;
 }
 
 .profileContent a {
