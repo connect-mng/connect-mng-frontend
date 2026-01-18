@@ -22,6 +22,33 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+.linkedInButton {
+  position: absolute;
+  top: 1.2vw;
+  right: 1.2vw;
+  width: 3vw;
+  height: 3vw;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: #fff;
+  color: #96b271;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  z-index: 2;
+}
+
+.linkedInButton:hover {
+  transform: translateY(-2px);
+  background: rgba(10, 102, 194, 1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
 .profileImage {
   position: absolute;
   inset: 0;
@@ -44,6 +71,10 @@
 .profileContent h3,
 .profileContent div,
 .profileContent a {
+  color: #fff;
+}
+
+.profileContent .linkedInLink {
   color: #fff;
 }
 
@@ -83,6 +114,13 @@
     flex: 1 1 calc(100% - 10px);
     aspect-ratio: unset;
     min-height: 70vw;
+  }
+
+  .linkedInButton {
+    top: 4vw;
+    right: 4vw;
+    width: 12vw;
+    height: 12vw;
   }
 
   .profileImage {
