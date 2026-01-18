@@ -12,27 +12,47 @@
 }
 
 .profile {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
   flex: 0 0 calc(25vw - 10px);
   margin: 5px;
   margin-bottom: 5vw;
-}
-
-.profile div {
-  font-size: calc(0.1rem + 1.1vw);
-}
-
-.profile a {
-  font-size: calc(0.1rem + 1.25vw);
+  overflow: hidden;
+  border-radius: 1.5rem;
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .profileImage {
-  height: calc(14vw);
-  width: calc(14vw);
-  margin-bottom: 1vw;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2vw;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.85) 100%);
+  color: #fff;
+}
+
+.profileContent h3,
+.profileContent div,
+.profileContent a {
+  color: #fff;
+}
+
+.profileContent div {
+  font-size: calc(0.1rem + 1.1vw);
+}
+
+.profileContent a {
+  font-size: calc(0.1rem + 1.25vw);
 }
 
 .galleryHeader {
@@ -60,19 +80,19 @@
 @media screen and (max-width: 750px) {
   .profile {
     flex: 1 1 calc(100% - 10px);
+    aspect-ratio: unset;
+    min-height: 70vw;
   }
 
   .profileImage {
-    height: calc(30vw);
-    width: calc(30vw);
-    margin-bottom: 1vw;
+    height: 100%;
   }
 
-  .profile a {
+  .profileContent a {
     font-size: calc(0.1rem + 4vw)
   }
 
-  .profile div {
+  .profileContent div {
     font-size: calc(0.25rem + 2.4vw);
   }
 

@@ -21,14 +21,16 @@ function Profile({ person }) {
         src={person.imageId}
         alt={person.name}
       />
-      <h3>
-        <a className={"linkedInLink"} href={person.linkedIn} target={"_blank"} rel={"noreferrer"}>{person.name}</a>
-      </h3>
-      <div>
-        {person.position}
-      </div>
-      <div>
-        {person.description}
+      <div className={"profileContent"}>
+        <h3>
+          <a className={"linkedInLink"} href={person.linkedIn} target={"_blank"} rel={"noreferrer"}>{person.name}</a>
+        </h3>
+        <div>
+          {person.position}
+        </div>
+        <div>
+          {person.description}
+        </div>
       </div>
     </div>
   );
