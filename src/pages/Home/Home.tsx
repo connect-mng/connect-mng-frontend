@@ -1,6 +1,5 @@
 import welcomeBlogThumbnail from "../../images/blogs/welcomeBlog/welcomeBlogThumbnail.jpg";
 import resumeBlogThumbnail from "../../images/blogs/resumeBlog/resumeBlogThumbnail.jpg";
-import ItemCarousel from "../../components/Carousel/ItemCarousel.jsx";
 import StyledLink from "../../components/StyledLink/StyledLink";
 import prog1 from "../../images/programs/prog1.png";
 import prog2 from "../../images/programs/prog2.png";
@@ -8,13 +7,13 @@ import prog3 from "../../images/programs/prog3.png";
 import React from "react";
 import slide1 from "../../images/homeCarousel/slide1.jpg";
 import slide2 from "../../images/homeCarousel/slide2.jpg";
-
+import ItemCarousel from "../../components/Carousel/ItemCarousel";
+import SimpleSlider from "../../components/Carousel/ReactSlickCarousel";
 import { Link } from "react-router-dom";
 import { useIntl } from "react-intl";
-
-
 import "./Home.css";
-import SimpleSlider from "../../components/Carousel/ReactSlickCarousel.jsx";
+import { FaUserPlus, FaHeart, FaEnvelope, FaDollarSign } from "react-icons/fa";
+import ActionCard from "../../components/ActionCard/ActionCard";
 
 export default function Home() {
 	const intl = useIntl();
@@ -67,6 +66,40 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
+
+				<div className={"actionCardRow"}>
+					<ActionCard
+						icon={<FaUserPlus />}
+						title="Become a Member"
+						description="Join our community of Mongolian American students and professionals. Access exclusive resources and events."
+						buttonText="Sign Up"
+						link="/signup"
+					/>
+
+					<ActionCard
+						icon={<FaHeart />}
+						title="Volunteer"
+						description="Share your time and expertise. Help organize events, mentor students, or contribute to our programs."
+						buttonText="Get Started"
+						link="/volunteer"
+					/>
+
+					<ActionCard
+						icon={<FaEnvelope />}
+						title="Stay Connected"
+						description="Subscribe to our newsletter for updates on events, opportunities, and community news."
+						buttonText="Subscribe"
+						link="/subscribe"
+					/>
+					<ActionCard
+						icon={<FaDollarSign />}
+						title="Donate"
+						description="100% of your donation directly supports our programs and community. We’re an all-volunteer organization."
+						buttonText="Donate Now"
+						link="/donate"
+					/>
+				</div>
+
 			</div>
 		</div>
 
