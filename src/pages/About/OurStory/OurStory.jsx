@@ -1,6 +1,7 @@
 import React from "react";
 import { useIntl } from "react-intl";
 import "./OurStory.css";
+import TimelineCard from '../../../components/TimelineCard/TimelineCard';
 
 export default function OurStory() {
 	const intl = useIntl();
@@ -34,6 +35,13 @@ export default function OurStory() {
 				<p>{intl.formatMessage({ id: "ourStoryText6a" })}</p>
 				<p><strong>{intl.formatMessage({ id: "ourStoryText6b" })}</strong></p>
 				<p><strong>{intl.formatMessage({ id: "ourStorySignOff" })}</strong></p>
+			</div>
+
+			<div className="timelineContainer">
+  				<div className="timelineLine"></div>
+  				<TimelineCard year="2023" title="The Idea" description="A group of Mongolian American graduates recognized the need for a supportive community network." position="left" />
+  				<TimelineCard year="2024" title="First Steps" description="Launched our first Resume Boost Program with 25 participants and informal resume workshops." position="right" />
+  				{/* Add more cards as needed */}
 			</div>
 		</div>
 	);

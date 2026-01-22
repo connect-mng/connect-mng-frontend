@@ -132,4 +132,20 @@
     .ourStoryDesc {
         font-size: calc(5px + 2vw);
     } */
+     .timelineContainer {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }           
+
+    .timelineLine {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #ccc;
+        transform: translateX(-50%);
+    }
 }
