@@ -1,10 +1,7 @@
 import React from "react";
 import { useIntl } from "react-intl";
 import "./OurStory.css";
-<<<<<<< HEAD
-=======
 import Timeline from "../../../components/Timeline/Timeline";
->>>>>>> 84d08d0 (Add timeline component to Our Story page)
 
 export default function OurStory() {
   const intl = useIntl();
@@ -59,16 +56,6 @@ export default function OurStory() {
           <h3>{intl.formatMessage({ id: "ourStorySub3" })}</h3>
           <p>{intl.formatMessage({ id: "ourStoryText3" })}</p>
 
-<<<<<<< HEAD
-				<h3>{intl.formatMessage({ id: "ourStorySub6" })}</h3>
-				<p>{intl.formatMessage({ id: "ourStoryText6a" })}</p>
-				<p><strong>{intl.formatMessage({ id: "ourStoryText6b" })}</strong></p>
-				<p><strong>{intl.formatMessage({ id: "ourStorySignOff" })}</strong></p>
-			</div>
-		</div>
-	);
-}
-=======
           <h3>{intl.formatMessage({ id: "ourStorySub4" })}</h3>
           <p>{intl.formatMessage({ id: "ourStoryText4a" })}</p>
           <p>{intl.formatMessage({ id: "ourStoryText4b" })}</p>
@@ -94,4 +81,3 @@ export default function OurStory() {
     </>
   );
 }
->>>>>>> 84d08d0 (Add timeline component to Our Story page)

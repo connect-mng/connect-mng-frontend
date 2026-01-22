@@ -1,0 +1,30 @@
+.timeline-card {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.timeline-card.left {
+  flex-direction: row-reverse;
+}
+
+.year {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 20px;
+}
+
+.card {
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 300px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+}
+
+.card p {
+  margin: 0;
+}
