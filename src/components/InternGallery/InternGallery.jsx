@@ -1,4 +1,3 @@
-import anuujin from "../../images/BoardMembers/Anuujin.jpg";
 import saruul from "../../images/BoardMembers/Saruul-Erdene.JPEG";
 import person from "../../images/BoardMembers/person.avif";
 import james from "../../images/BoardMembers/James.JPG";
@@ -8,11 +7,12 @@ import batsuuri from "../../images/BoardMembers/Batsuuri.png";
 import bilguun from "../../images/BoardMembers/Bilguun.png";
 import anuujinC from "../../images/BoardMembers/AnuujinC.jpg";
 import selenge from "../../images/BoardMembers/Sissi.jpg";
+import erik from "../../images/Interns/erik.webp";
 import React from "react";
 import { useIntl } from "react-intl";
 
-import "./BoardMemberGallery.desktop.css";
-import "./BoardMemberGallery.mobile.css";
+import "./InternGallery.desktop.css";
+import "./InternGallery.mobile.css";
 
 
 function Profile({ person }) {
@@ -65,35 +65,35 @@ export default function BoardMemberGallery() {
       </div>
       <div className={"profileContainer"}>
         <Profile person={{
-          name: "Anuujin Ider",
-          imageId: anuujin,
-          position: "President",
+          name: "Erik Bayar-Ochir",
+          imageId: erik,
+          position: "Web Developer",
           description: "",
-          linkedIn: "https://www.linkedin.com/in/anuujini/"
+          linkedIn: "https://www.linkedin.com/in/erkhemtugs-bayar-ochir-8263ba239"
         }} />
         <Profile person={{
-          name: "Saruul-Erdene Ganbayar",
+          name: "Tuyaa Saruul",
           imageId: saruul,
-          position: "Vice President",
+          position: "Web Developer",
           description: "",
           linkedIn: "https://www.linkedin.com/in/saruul-erdene/"
         }} />
         <Profile person={{
-          name: "Bek",
+          name: "Nico",
           imageId: person,
-          position: "To be available",
+          position: "Marketing Director",
           description: "",
-          linkedIn: "https://www.linkedin.com/"
+          linkedIn: "https://www.linkedin.com/in/badmaarag-batjargal-72a747174/"
         }} />
         <Profile person={{
-          name: "James Kitticha Edwards",
+          name: "Jason",
           imageId: james,
           position: "Web Developer",
           description: "",
           linkedIn: "https://www.linkedin.com/in/jkedwards8/"
         }} />
         <Profile person={{
-          name: "Matthew Balgan",
+          name: "Temuulen",
           imageId: matthew,
           position: "Web Developer",
           description: "",
