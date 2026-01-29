@@ -79,7 +79,7 @@ export default function BoardMemberGallery() {
           linkedIn: "https://www.linkedin.com/in/saruul-erdene/"
         }} />
         <Profile person={{
-          name: "Badmaarag Batjargal",
+          name: "Bek",
           imageId: badmaarag,
           position: "Marketing Director",
           description: "",
