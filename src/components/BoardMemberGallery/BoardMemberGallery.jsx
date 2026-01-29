@@ -11,7 +11,9 @@ import selenge from "../../images/BoardMembers/Sissi.jpg";
 import React from "react";
 import { useIntl } from "react-intl";
 
-import "./BoardMemberGallery.css";
+import "./BoardMemberGallery.desktop.css";
+import "./BoardMemberGallery.mobile.css";
+
 
 function Profile({ person }) {
   return (
