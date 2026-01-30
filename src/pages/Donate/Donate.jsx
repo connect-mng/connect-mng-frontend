@@ -2,22 +2,23 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { useState } from "react";
 import PaypalButton from "./PaypalButton";
-
-
+import { ImpactSection } from "../../components/Donation/ImpactSection";
+import { DetailBox } from "../../components/Donation/ImpactDetailBox";
+import { ImpactDetail } from "../../components/Donation/ImpactDetails";
 import "./Donate.css";
 
 export default function Donate() {
-	const intl = useIntl();
-	const cashAmounts = ["$10", "$20", "$50", "$100", "$250", "$500"];
-	const [donateAmount, updateDonateAmount] = useState("");
+  const intl = useIntl();
+  const cashAmounts = ["$10", "$20", "$50", "$100", "$250", "$500"];
+  const [donateAmount, updateDonateAmount] = useState("");
 
-	const handleInputChange = (event) => {
-		updateDonateAmount(event.target.value);
-	};
+  const handleInputChange = (event) => {
+    updateDonateAmount(event.target.value);
+  };
 
-	return (
-		<div className={"donateContainer"}>
-			<h1>
+  return (
+    <div>
+      {/* <h1>
 				{intl.formatMessage({ id: "empowerYoungMongolians" }).toUpperCase()}
 			</h1>
 			<h2>
@@ -36,15 +37,20 @@ export default function Donate() {
 				onChange={handleInputChange}
 				value={donateAmount}
 			/>
-			{<PaypalButton donateAmount={donateAmount} />}
-		</div>
-	);
-};
+			{<PaypalButton donateAmount={donateAmount} />} */}
+      <ImpactSection
+        title="Where your donation goes"
+        description="100% of your donation directly supports our programs and community. We're an all-volunteer organization with zero administrative overhead."
+      />
+      <ImpactDetail/>
+    </div>
+  );
+}
 
 function MoneyButton({ text, onClick }) {
-	return (
-		<button className={"moneyButton"} onClick={onClick}>
-			{text}
-		</button>
-	);
-};
+  return (
+    <button className={"moneyButton"} onClick={onClick}>
+      {text}
+    </button>
+  );
+}

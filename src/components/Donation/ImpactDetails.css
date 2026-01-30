@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    justify-content: center;   /* centers items as a group */
+    gap: 24px;                 /* space between cards */
+  
+    padding: 0 24px;           /* equal left & right spacing from screen */
+  }
+  
