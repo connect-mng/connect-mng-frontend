@@ -1,0 +1,11 @@
+/* Mobile Navigation Styles */
+
+@media (max-width: 768px) {
+    .nav-wrapper {
+        width: 100%;
+        background: #ffffff;
+    }
+
+    /* Mobile navigation is handled by Mobile.jsx component */
+    /* Desktop nav-container is hidden via NavigationDesktop.css */
+}

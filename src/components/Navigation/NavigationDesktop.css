@@ -1,0 +1,80 @@
+/* Desktop Navigation Styles */
+
+.nav-wrapper {
+    width: 100%;
+    background: #ffffff;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 48px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.nav-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link,
+.nav-button {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-button:hover {
+    color: #70A9A1;
+}
+
+.nav-chevron {
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+/* Dropdown positioning - override NavDropdown styles for desktop */
+.nav-item-dropdown .subDropdownMenu {
+    min-width: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+    .nav-container {
+        display: none;
+    }
+}

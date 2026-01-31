@@ -1,0 +1,150 @@
+/* Desktop Footer Styles */
+
+.footer {
+    background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%);
+    color: #ffffff;
+    padding: 48px 32px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 374px;   
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    width: 1103px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+/* Left Column - Branding */
+.footer-branding {
+    flex: 0 0 360px;
+    max-width: 360px;
+}
+
+.footer-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.footer-mission {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 28px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+}
+
+.footer-social-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.footer-social-button img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Middle Column - Quick Links */
+.footer-links {
+    flex: 0 0 220px;
+}
+
+.footer-heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #ffffff;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-link {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #70A9A1;
+}
+
+/* Hide mobile-only links on desktop */
+.footer-link-mobile {
+    display: none;
+}
+
+/* Right Column - Contact */
+.footer-contact {
+    flex: 0 0 220px;
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-email {
+    color: #70A9A1;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-email:hover {
+    color: #8bc4bb;
+}
+
+/* Bottom Section */
+.footer-bottom {
+    width: 1103px;
+    margin: 0 auto;
+}
+
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, #444444 50%, transparent 100%);
+    margin-bottom: 24px;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #888888;
+    margin: 0;
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+    .footer {
+        display: none;
+    }
+}
