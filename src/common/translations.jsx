@@ -138,6 +138,7 @@ const translations = {
         ourValues: "Our Values",
         ourValuesDesc: "At Connect MNG, we believe in community, empowerment, and growth. We are dedicated to fostering an inclusive space where Mongolian-American college students and young professionals can connect, learn, and thrive. By promoting cultural identity, career development, and leadership, we aim to equip individuals with the tools and opportunities they need to succeed—both personally and professionally.",
         meetBoard: "Meet the Board",
+        meetInterns: "Meet the Interns",
 
         // footer translation
         engage: "ENGAGE",

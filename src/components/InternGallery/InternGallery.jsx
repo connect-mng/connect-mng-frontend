@@ -61,7 +61,7 @@ export default function BoardMemberGallery() {
   return (
     <div className={"galleryContainer"}>
       <div className={"galleryHeader"}>
-        <h1>{intl.formatMessage({ id: "meetBoard" })}</h1>
+        <h1>{intl.formatMessage({ id: "meetInterns" })}</h1>
       </div>
       <div className={"profileContainer"}>
         <Profile person={{
@@ -105,34 +105,6 @@ export default function BoardMemberGallery() {
           position: "Web Developer",
           description: "",
           linkedIn: "https://www.linkedin.com/in/bayartsogt-yadamsuren/"
-        }} />
-        <Profile person={{
-          name: "Batsuuri Baatarchuluun",
-          imageId: batsuuri,
-          position: "Treasurer",
-          description: "",
-          linkedIn: "https://www.linkedin.com/in/batsuuri7/"
-        }} />
-        <Profile person={{
-          name: "Bilguun Enkhbileg",
-          imageId: bilguun,
-          position: "Events Manager",
-          description: "",
-          linkedIn: "https://www.linkedin.com/in/bilguunenkhb03/"
-        }} />
-        <Profile person={{
-          name: "Anuujin Chadraa",
-          imageId: anuujinC,
-          position: "Public Relations Manager",
-          description: "",
-          linkedIn: "https://www.linkedin.com/in/anuujinc/"
-        }} />
-        <Profile person={{
-          name: "Selenge Ulam-Urnukh",
-          imageId: selenge,
-          position: "Creative Director",
-          description: "",
-          linkedIn: "https://www.linkedin.com/in/selengeuo/"
         }} />
       </div>
     </div>
