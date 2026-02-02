@@ -1,0 +1,128 @@
+.donateHeroCard {
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  margin: 0;                /* no spacing = clean full-bleed */
+  background-size: cover;
+  background-position: center;
+  min-height: 630px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* overlay like HomePageCard / PageCard */
+.donateHeroCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    #1E3A5F,
+    #2D5A7B
+  );
+  z-index: 0;
+  opacity: 0.75;
+}
+
+.donateHeroCard--fullBleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  border-radius: 0;
+}
+
+.donateHeroCard__inner {
+  position: relative; /* above overlay */
+  width: 100%;
+  padding: clamp(18px, 3vw, 36px);
+  max-width: 900px;   /* keeps text readable like HomePage */
+  color: #fff;
+}
+
+.donateHeroCard--center .donateHeroCard__inner {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.donateHeroCard--left .donateHeroCard__inner {
+  margin-left: 0;
+  text-align: left;
+}
+
+/* pill */
+.donateHeroCard__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+  margin-bottom: 14px;
+}
+
+.donateHeroCard__pillIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.95;
+}
+
+.donateHeroCard__pillText {
+  font: Inter;
+  font-weight: 400;
+  letter-spacing: -0.15px;
+  font-size: 14px;
+}
+
+.donateHeroCard__title {
+  font: Inter;
+  color: white;
+  font-weight: 400;
+  letter-spacing: -0.31px;
+  margin: 0 0 30px;
+  font-size: 20px;
+}
+
+.donateHeroCard__body {
+  font: Inter;
+  font-weight: 400;
+  margin: 0;
+  line-height: 24px;
+  font-size: 16px;
+  letter-spacing: -0.31px;
+  margin: 0 0 30px;
+  max-width: 60ch;
+}
+
+/* footer / buttons */
+.donateHeroCard__footer {
+  margin-top: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.donateHeroCard__footer--left {
+  justify-content: flex-start;
+}
+
+.donateHeroCard__footer--center {
+  justify-content: center;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .donateHeroCard {
+    min-height: 440px;
+  }
+
+  .donateHeroCard__inner {
+    max-width: 100%;
+  }
+
+  .donateHeroCard__body {
+    max-width: 100%;
+  }
+}

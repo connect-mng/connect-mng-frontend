@@ -1,0 +1,76 @@
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+  
+    font-weight: 700;
+    white-space: nowrap;
+    box-sizing: border-box;
+  
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  
+  .ctaButton:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+  }
+  
+  /* Variants */
+  .ctaButton--primary {
+    background: #9ab66a;
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+  }
+  
+  .ctaButton--secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    box-shadow: none;
+  }
+  
+  /* Fixed sizes */
+  .ctaButton--small {
+    width: 146px;
+    height: 50px;
+    padding: 0 18px;
+    border-radius: 14px;
+    font-size: 16px;
+  }
+  
+  .ctaButton--medium {
+    width: 165px;
+    height: 60px;
+    padding: 0 20px;
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.31px;
+  }
+  
+  .ctaButton--large {
+    width: 216px;
+    height: 50px;
+    padding: 0 22px;
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.31px;
+  }
+  
+  /* Optional override */
+  .ctaButton--full {
+    width: 100%;
+  }
+  
+  /* Arrow */
+  .ctaButton__arrow {
+    font-size: 1.1em;
+  }
+  

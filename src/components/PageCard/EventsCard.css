@@ -1,0 +1,150 @@
+.eventsCard {
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    margin: 0 0 calc(1rem + 2vw);
+  }
+
+  .eventsCard--fullBleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    border-radius: 0;
+  }
+  
+  .eventsCard--hero {
+    width: 100%;
+    min-height: 630px;
+    display: flex;
+    align-items: center;
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+  
+  /* overlay like PageCard (pseudo-element so nothing “extra” shows) */
+  .eventsCard--overlay {
+    position: relative;
+  }
+  
+  .eventsCard--overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      #1E3A5F,
+      #2D5A7B
+    );
+    z-index: 0;
+    opacity: 0.75;
+  }
+  
+  /* inner padding */
+  .eventsCard__inner {
+    position: relative; /* above overlay */
+    width: 100%;
+    padding: clamp(22px, 4vw, 56px);
+  }
+  
+  /* content block */
+  .eventsCard__content {
+    max-width: 1100px;
+    color: #ffffff;
+  }
+  
+  .eventsCard__content--left {
+    text-align: left;
+  }
+  
+  .eventsCard__content--center {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  /* pill */
+  .eventsCard__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(10px);
+    margin-bottom: 18px;
+  }
+  
+  .eventsCard__pill--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .eventsCard__pillIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.95;
+  }
+  
+  .eventsCard__pillText {
+    font-style: Regular;
+    font: Inter;
+    font-weight: 400;
+    letter-spacing: -0.15px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .eventsCard__title {
+    font: Inter;
+    color: white;
+    margin: 0 0 30px;
+    font-weight: 400;
+    letter-spacing: -0.31px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .eventsCard__body {
+    font: Inter;
+    margin: 0 0 30px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.31px;
+    max-width: 60ch;
+  }
+  
+  /* footer buttons */
+  .eventsCard__footer {
+    margin-top: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .eventsCard__footer--left {
+    justify-content: flex-start;
+  }
+  
+  .eventsCard__footer--center {
+    justify-content: center;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .eventsCard--hero {
+      min-height: 440px;
+    }
+  
+    .eventsCard__content {
+      max-width: 100%;
+    }
+  
+    .eventsCard__body {
+      max-width: 100%;
+    }
+  }
+  

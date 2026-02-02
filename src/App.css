@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
 
+:root {
+    /* ✅ Set to your pinned header height (adjust if your header is taller/shorter) */
+    --header-offset: 90px;
+  }
+
 body,
 html {
     margin: 0;
@@ -19,6 +24,7 @@ html {
 @media screen and (max-width: 768px) {
     .pageContainer {
         padding-top: calc(1rem + 20vw);
+
     }
 
 }
@@ -39,6 +45,20 @@ html {
     padding: 1vw;
     border-radius: 1.5vw;
     z-index: 900;
+}
+
+.fullBleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .fullBleedTop {
+    margin-top: calc(-1 * var(--header-offset));
+  }
+
+.fullBleedNoRadius {
+    border-radius: 0 !important;
 }
 
 @media screen and (max-width: 750px) {

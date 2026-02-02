@@ -1,0 +1,114 @@
+.resumeBoostCard {
+    width: 100%;
+    min-height: 460px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 0 calc(1rem + 2vw);
+  }
+  
+  .resumeBoostCard__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 18, 32, var(--overlayOpacity, 0.55));
+  }
+  
+  .resumeBoostCard__inner {
+    position: relative;
+    width: 100%;
+    padding: clamp(22px, 4vw, 52px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #ffffff;
+  }
+  
+  .resumeBoostCard--left .resumeBoostCard__inner {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .resumeBoostCard--center .resumeBoostCard__inner {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .resumeBoostCard__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(10px);
+  }
+  
+  .resumeBoostCard__pillIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+  }
+  
+  .resumeBoostCard__pillText {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  }
+  
+  .resumeBoostCard__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  }
+  
+  .resumeBoostCard__lead {
+    margin: 0;
+    line-height: 1.7;
+    font-weight: 500;
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    max-width: 900px;
+  }
+  
+  .resumeBoostCard__body {
+    margin: 0;
+    line-height: 1.7;
+    font-weight: 400;
+    font-size: clamp(1rem, 1.15vw, 1.1rem);
+    max-width: 980px;
+    opacity: 0.95;
+  }
+  
+  .resumeBoostCard__buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .resumeBoostCard--center .resumeBoostCard__buttons {
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    .resumeBoostCard {
+      min-height: 420px;
+      border-radius: 14px;
+    }
+  
+    .resumeBoostCard__lead,
+    .resumeBoostCard__body {
+      max-width: 100%;
+    }
+  
+    .resumeBoostCard__buttons {
+      width: 100%;
+      gap: 12px;
+    }
+  }
+  

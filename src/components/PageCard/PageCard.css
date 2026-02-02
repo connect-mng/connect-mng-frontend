@@ -1,0 +1,123 @@
+.pageCard {
+    width: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    margin: 0 0 calc(1rem + 2vw);
+  }
+
+  .pageCard--fullBleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    border-radius: 0;
+  }
+  
+  .pageCard--hero {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .pageCard--overlay {
+    position: relative;
+  }
+  
+  .pageCard--overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /*background: rgba(0, 0, 0, 0.35);*/    
+    background: linear-gradient(
+      135deg,
+      #1E3A5F,
+      #2D5A7B
+    );
+    z-index: 0;
+    opacity: 0.75;
+  }
+  
+  .pageCard__inner {
+    position: relative; /* above overlay */
+    width: 100%;
+    padding: clamp(18px, 3vw, 36px);
+  }
+  
+  .pageCard__content {
+    max-width: 900px; 
+    color: white;
+  }
+  
+  .pageCard--plain .homePageCard__content {
+    color: white;
+  }
+  
+  .pageCard__content--left {
+    text-align: left;
+  }
+  
+  .pageCard__content--center {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .pageCard__title {
+    font: Inter;
+    color: white;
+    font-weight: 400;
+    letter-spacing: -0.31px;
+    margin: 0 0 30px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .pageCard__body {
+    font: Inter;
+    font-weight: 400;
+    margin: 0 0 30px;
+    line-height: 24px;
+    font-size: 16px;
+    max-width: 60ch;
+    letter-spacing: -0.31px;
+  }
+  
+  /* Footer / CTA */
+  .pageCard__footer {
+    margin-top: 14px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  
+  .pageCard__footer--left {
+    justify-content: flex-start;
+  }
+  
+  .pageCard__footer--center {
+    justify-content: center;
+  }
+  
+  /* PLAIN MODE (no background image) */
+  .pageCard--plain {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .homePageCard--hero {
+      min-height: 220px;
+    }
+  
+    .homePageCard__content {
+      max-width: 100%;
+    }
+  
+    .homePageCard__body {
+      max-width: 100%;
+    }
+  }
+  

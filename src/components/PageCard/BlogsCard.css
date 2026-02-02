@@ -1,0 +1,98 @@
+/* ===== Blogs Card (EventsCard-style layout + Blogs gradient bg) ===== */
+
+.blogsHeroCard {
+  width: 100%;
+  border-radius: 0;              /* like Events */
+  overflow: hidden;
+  margin: 0;                     /* for full-bleed usage */
+  min-height: 580px;             /* like Events hero height */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* keep the Blogs background (your gradient) */
+.blogsHeroCard__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      900px 520px at 35% 45%,
+      rgba(255, 255, 255, 0.10),
+      rgba(255, 255, 255, 0) 60%
+    ),
+    linear-gradient(to bottom, var(--gradFrom, #24506A), var(--gradTo, #557B4C));
+  z-index: 0;
+}
+
+/* inner padding like EventsCard */
+.blogsHeroCard__inner {
+  position: relative; /* above bg */
+  width: 100%;
+  padding: clamp(22px, 4vw, 56px);
+  z-index: 1;
+}
+
+/* content block like EventsCard */
+.blogsHeroCard__left {
+  max-width: 1100px;
+  color: #ffffff;
+}
+
+/* pill like EventsCard */
+.blogsHeroCard__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+  margin-bottom: 18px;
+}
+
+/* title + body like EventsCard */
+.blogsHeroCard__title {
+  margin: 0 0 30px;
+  font-weight: 400;
+  letter-spacing: -0.31px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.blogsHeroCard__body {
+  margin: 0 0 30px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.31px;
+  max-width: 60ch;
+  opacity: 0.95;
+}
+
+/* alignment option (match EventsCard behavior) */
+.blogsHeroCard--center .blogsHeroCard__left {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.blogsHeroCard--center .blogsHeroCard__inner {
+  display: flex;
+  justify-content: center;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .blogsHeroCard {
+    min-height: 440px;
+    border-radius: 0;
+  }
+
+  .blogsHeroCard__left {
+    max-width: 100%;
+  }
+
+  .blogsHeroCard__body {
+    max-width: 100%;
+  }
+}

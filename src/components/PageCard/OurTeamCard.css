@@ -1,0 +1,116 @@
+.ourTeamCard {
+    width: 100%;
+    min-height: 580px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 0 calc(1rem + 2vw);
+  }
+  
+  .ourTeamCard__inner {
+    width: 100%;
+    padding: clamp(22px, 4vw, 56px);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: #ffffff;
+  }
+  
+  .ourTeamCard--center .ourTeamCard__inner {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .ourTeamCard--left .ourTeamCard__inner {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .ourTeamCard__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(10px);
+    margin-bottom: 18px;
+  }
+  
+  .ourTeamCard__pill--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .ourTeamCard__pillIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.95;
+  }
+  
+  .ourTeamCard__pillText {
+    font: Inter;
+    font-weight: 400;
+    letter-spacing: -0.15px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .ourTeamCard__title {
+    color: white;
+    margin: 0;
+    font: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.45px;
+  }
+  
+  .ourTeamCard__body {
+    margin: 0;
+    line-height: 26px;
+    font-weight: 400;
+    font-size: 16px; 
+    max-width: 1000px;
+    letter-spacing: -0.31px;
+  }
+  
+  .ourTeamCard__topRight {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ourTeamCard__topRightImg {
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    object-fit: cover;
+  }
+ 
+  @media (max-width: 768px) {
+    .ourTeamCard {
+      min-height: 360px;
+      border-radius: 14px;
+    }
+  
+    .ourTeamCard__topRight {
+      top: 14px;
+      right: 14px;
+    }
+  
+    .ourTeamCard__body {
+      max-width: 100%;
+    }
+  }

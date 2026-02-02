@@ -1,0 +1,131 @@
+.ourStoryCard {
+    width: 100%;
+    min-height: 580px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 0 calc(1rem + 2vw);
+  }
+  
+  .ourStoryCard__overlay {
+    position: absolute;
+    inset: 0;
+    /*background: rgba(8, 18, 32, var(--overlayOpacity, 0.55));*/
+    background: linear-gradient(
+      135deg,
+      #1E3A5F,
+      #2D5A7B
+    );
+    z-index: 0;
+    opacity: 0.75;
+  }
+
+  .ourStoryCard--overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /*background: rgba(0, 0, 0, 0.35);*/    
+    background: linear-gradient(
+      135deg,
+      #1E3A5F,
+      #2D5A7B
+    );
+    z-index: 0;
+    opacity: 0.75;
+  }
+  
+  .ourStoryCard__inner {
+    position: relative;
+    width: 100%;
+    padding: clamp(22px, 4vw, 48px);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: #ffffff;
+  }
+  
+  .ourStoryCard--center .ourStoryCard__inner {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .ourStoryCard--left .ourStoryCard__inner {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .ourStoryCard__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(10px);
+    margin-bottom: 18px;
+  }
+  
+  .ourStoryCard__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: rgba(154, 182, 106, 1); /* green dot */
+    box-shadow: 0 0 0 4px rgba(154, 182, 106, 0.22);
+  }
+  
+  .ourStoryCard__pillText {
+    font-weight: 400;
+    letter-spacing: -0.15px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .ourStoryCard__title {
+    color: white;
+    margin: 0;
+    font: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32.5px;
+    letter-spacing: -0.45px;
+  }
+  
+  .ourStoryCard__body {
+    margin: 0;
+    line-height: 1.7;
+    font-weight: 500;
+    font-size: 16px; 
+    max-width: 1000px;
+  }
+
+  .ourStoryCard__buttons {
+    margin-top: 14px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  
+  .ourStoryCard--left .ourStoryCard__buttons {
+    justify-content: flex-start;
+  }
+  
+  @media (max-width: 768px) {
+    .ourStoryCard {
+      min-height: 440px;
+      border-radius: 14px;
+    }
+  
+    .ourStoryCard__body {
+      max-width: 100%;
+    }
+  
+    .ourStoryCard__buttons {
+      width: 100%;
+      gap: 12px;
+    }
+  }
