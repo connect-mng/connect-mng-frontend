@@ -8,6 +8,7 @@ import bilguun from "../../images/BoardMembers/Bilguun.png";
 import anuujinC from "../../images/BoardMembers/AnuujinC.jpg";
 import selenge from "../../images/BoardMembers/Sissi.jpg";
 import erik from "../../images/Interns/erik.webp";
+import tuya from "../../images/Interns/tuya.jpg";
 import React from "react";
 import { useIntl } from "react-intl";
 
@@ -99,14 +100,14 @@ export default function BoardMemberGallery() {
           description: "",
           linkedIn: "https://www.linkedin.com/in/matthewbalgan/"
         }} />
+      </div> 
         <Profile person={{
-          name: "Bayartsogt Yadamsuren",
-          imageId: tsogo,
-          position: "Web Developer",
+          name: "Munkhtuya Yadmaa",
+          imageId:tuya,
+          position: "Intern",
           description: "",
-          linkedIn: "https://www.linkedin.com/in/bayartsogt-yadamsuren/"
+          linkedIn: "https://www.linkedin.com/in/munkhtuya-yadmaa-7270542b9/"
         }} />
-      </div>
     </div>
   );
 };
