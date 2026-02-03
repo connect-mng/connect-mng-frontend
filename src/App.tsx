@@ -46,7 +46,6 @@ export default function App() {
 						<Header isEnglish={isEnglish} setIsEnglish={setIsEnglish} />
 						<Navigation />
 					</div>
-
 					<div className={"pageContainer"}>
 						<Routes>
 							<Route path="/programs" element={<Programs />} />
@@ -62,12 +61,9 @@ export default function App() {
 								path="/programs/resume-boost-program"
 								element={<ResumeBoostProgram />}
 							/>
-
 							<Route path="/get-involved/volunteer" element={<Volunteer />} />
 							<Route path="/get-involved/internships" element={<Internships />} />
-
 							<Route path="/resources/podcasts" element={<Podcasts />} />
-
 							<Route path="/events" element={<Events />} />
 							<Route path="/events/resume-help" element={<ResumeHelp />} />
 							<Route path="/events/happy-hour" element={<HappyHour />} />
@@ -75,7 +71,6 @@ export default function App() {
 								path="/events/resume-building"
 								element={<ResumeBuilding />}
 							/>
-
 							<Route path="/resources/blogs" element={<Blogs />} />
 							<Route
 								path="/resources/blogs/resume-blog"
