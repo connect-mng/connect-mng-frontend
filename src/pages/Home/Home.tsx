@@ -17,7 +17,6 @@ import ActionCard from "../../components/ActionCard/ActionCard";
 
 export default function Home() {
 	const intl = useIntl();
-
 	const blogSlides = [
 		<Link to={"/resources/blogs"}>
 			<div className={"carouselSlide"}>
@@ -35,7 +34,6 @@ export default function Home() {
 			</div>
 		</Link>,
 	];
-
 	return (
 		<div className={"homeContainer"}>
 			<div>
@@ -66,7 +64,6 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-
 				<div className={"actionCardRow"}>
 					<ActionCard
 						icon={<FaUserPlus />}
@@ -75,7 +72,6 @@ export default function Home() {
 						buttonText="Sign Up"
 						link="/signup"
 					/>
-
 					<ActionCard
 						icon={<FaHeart />}
 						title="Volunteer"
@@ -83,7 +79,6 @@ export default function Home() {
 						buttonText="Get Started"
 						link="/volunteer"
 					/>
-
 					<ActionCard
 						icon={<FaEnvelope />}
 						title="Stay Connected"
@@ -99,7 +94,6 @@ export default function Home() {
 						link="/donate"
 					/>
 				</div>
-
 			</div>
 		</div>
 
