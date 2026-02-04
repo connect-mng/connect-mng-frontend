@@ -1,5 +1,3 @@
-/* Desktop Navigation Styles */
-
 .nav-wrapper {
     width: 100%;
     background: #ffffff;
@@ -50,7 +48,7 @@
 .nav-link,
 .nav-button {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     color: #3c4654;
     text-decoration: none;
     background: none;
@@ -73,7 +71,6 @@
     margin-left: 2px;
 }
 
-/* Dropdown positioning - override NavDropdown styles for desktop */
 .nav-item-dropdown .subDropdownMenu {
     min-width: 180px;
     left: 50%;
@@ -81,7 +78,6 @@
     margin-top: 8px;
 }
 
-/* Hide on mobile */
 @media (max-width: 768px) {
     .nav-container {
         display: none;

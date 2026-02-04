@@ -13,9 +13,12 @@ import Mobile from "../Mobile/Mobile.jsx";
 
 export default function Navigation() {
 	const intl = useIntl();
-	const [showAbout, setShowAbout] = useState(false);
-	const [showPrograms, setShowPrograms] = useState(false);
-	const [showGetInvolved, setShowGetInvolved] = useState(false);
+	const dropdownIds = {
+		about: "about",
+		programs: "programs",
+		getInvolved: "getInvolved",
+	};
+	const [openDropdown, setOpenDropdown] = useState(null);
 
 	const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -25,55 +28,36 @@ export default function Navigation() {
 		return () => window.removeEventListener("resize", handleResize);
 	}, []);
 
-	function handleAboutToggle() {
-		setShowAbout(!showAbout);
-		setShowPrograms(false);
-		setShowGetInvolved(false);
+	function toggleDropdown(id) {
+		setOpenDropdown((current) => (current === id ? null : id));
 	}
 
-	function handleProgramsToggle() {
-		setShowPrograms(!showPrograms);
-		setShowAbout(false);
-		setShowGetInvolved(false);
-	}
-
-	function handleGetInvolvedToggle() {
-		setShowGetInvolved(!showGetInvolved);
-		setShowAbout(false);
-		setShowPrograms(false);
-	}
-
-	function handleDropdownSelect() {
-		setShowAbout(false);
-		setShowPrograms(false);
-		setShowGetInvolved(false);
-	}
-
-	function handleNavLinkClick() {
-		setShowAbout(false);
-		setShowPrograms(false);
-		setShowGetInvolved(false);
+	function closeDropdown() {
+		setOpenDropdown(null);
 	}
 
 	return (
-		<nav className="nav-wrapper">
+		<nav className="nav-wrapper" aria-label="Primary navigation">
 			{isMobile ? (
 				<Mobile />
 			) : (
 				<div className="nav-container">
-					<Link to="/" className="nav-logo-link" onClick={handleNavLinkClick}>
+					<Link to="/" className="nav-logo-link" onClick={closeDropdown}>
 						<img src={logo} alt="Connect MNG Logo" className="nav-logo" />
 					</Link>
 
 					<div className="nav-menu">
 						<div className="nav-item nav-item-dropdown">
-							<button className="nav-button" onClick={handleAboutToggle}>
+							<button
+								className="nav-button"
+								onClick={() => toggleDropdown(dropdownIds.about)}
+							>
 								{intl.formatMessage({ id: "about" })}
 								<GoTriangleDown className="nav-chevron" />
 							</button>
-							{showAbout && (
+							{openDropdown === dropdownIds.about && (
 								<NavDropdown
-									onSelect={handleDropdownSelect}
+									onSelect={closeDropdown}
 									options={[
 										intl.formatMessage({ id: "ourStory" }),
 										intl.formatMessage({ id: "ourTeam" }),
@@ -83,30 +67,33 @@ export default function Navigation() {
 							)}
 						</div>
 
-						<Link to="/resources/blogs" className="nav-link" onClick={handleNavLinkClick}>
+						<Link to="/resources/blogs" className="nav-link" onClick={closeDropdown}>
 							{intl.formatMessage({ id: "blogs" })}
 						</Link>
 
-						<Link to="/events" className="nav-link" onClick={handleNavLinkClick}>
+						<Link to="/events" className="nav-link" onClick={closeDropdown}>
 							{intl.formatMessage({ id: "events" })}
 						</Link>
 
-						<Link to="/resources/podcasts" className="nav-link" onClick={handleNavLinkClick}>
+						<Link to="/resources/podcasts" className="nav-link" onClick={closeDropdown}>
 							{intl.formatMessage({ id: "podcasts" })}
 						</Link>
 
 						<div className="nav-item nav-item-dropdown">
-							<button className="nav-button" onClick={handleProgramsToggle}>
+							<button
+								className="nav-button"
+								onClick={() => toggleDropdown(dropdownIds.programs)}
+							>
 								{intl.formatMessage({ id: "programs" })}
 								<GoTriangleDown className="nav-chevron" />
 							</button>
-							{showPrograms && (
+							{openDropdown === dropdownIds.programs && (
 								<NavDropdown
-									onSelect={handleDropdownSelect}
+									onSelect={closeDropdown}
 									options={[
-										"Cultural Compass",
-										"Mentorship",
-										"Resume Boost",
+										intl.formatMessage({ id: "culturalCompass" }),
+										intl.formatMessage({ id: "mentorship" }),
+										intl.formatMessage({ id: "resumeBoost" }),
 									]}
 									links={[
 										"/programs/cultural-compass-program",
@@ -118,13 +105,16 @@ export default function Navigation() {
 						</div>
 
 						<div className="nav-item nav-item-dropdown">
-							<button className="nav-button" onClick={handleGetInvolvedToggle}>
+							<button
+								className="nav-button"
+								onClick={() => toggleDropdown(dropdownIds.getInvolved)}
+							>
 								{intl.formatMessage({ id: "getInvolved" })}
 								<GoTriangleDown className="nav-chevron" />
 							</button>
-							{showGetInvolved && (
+							{openDropdown === dropdownIds.getInvolved && (
 								<NavDropdown
-									onSelect={handleDropdownSelect}
+									onSelect={closeDropdown}
 									options={[
 										intl.formatMessage({ id: "donate" }),
 										intl.formatMessage({ id: "internships" }),
