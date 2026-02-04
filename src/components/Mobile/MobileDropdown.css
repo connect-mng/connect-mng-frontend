@@ -4,6 +4,8 @@
     align-items: center;
     background-color: #FFFFFF;
     width: 100%;
+    border: none;
+    box-shadow: none;
 }
 
 .menu-button-container {
@@ -63,7 +65,9 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    position: absolute;
+    position: static;
+    border: none;
+    box-shadow: none;
 }
 
 #menu-toggle:checked~.mobileNavLinks {
@@ -77,9 +81,14 @@
     width: 100%;
     text-align: left;
     background-color: #FFFFFF;
-    border-bottom: 1px solid #DDD;
-    padding-left: 2em;
+    border: none;
+    box-shadow: none;
+    padding-left: 20px;
+    padding-right: 20px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* .mobileNavLink:active {
@@ -87,7 +96,16 @@
 }  */
 
 .mobileNavLink:hover {
-    background-color: #9EC1A3;
+    background-color: #f3f4f6;
+}
+
+.mobileNavLink:active {
+    background-color: #e5e7eb;
+}
+
+.mobileNavChevron {
+    font-size: 14px;
+    color: #6b7280;
 }
 
 .mobileLogo {
@@ -95,11 +113,20 @@
     align-self: flex-start;
 }
 
+.mobileLogo .logo {
+    height: clamp(36px, 8vw, 54px);
+    width: auto;
+    max-width: 60vw;
+}
+
 .menuButton {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+    border: none;
+    box-shadow: none;
 }
 
 .menu-button>button {
@@ -111,7 +138,7 @@
     width: 20px;
 }
 
-button {
+.menuButton button {
     border: none;
-    background-color: #c7ddb5;
+    background-color: transparent;
 }

@@ -1,11 +1,9 @@
-/* Mobile Footer Styles */
-
 @media (max-width: 768px) {
     .footer {
         display: block;
-        background: linear-gradient(180deg, #1a1a1a 0%, #000000 100%);
+        background: #0b0b0b;
         color: #ffffff;
-        padding: 40px 25px 25px;
+        padding: 40px 24px 28px;
         width: 100%;
         box-sizing: border-box;
     }
@@ -13,41 +11,47 @@
     .footer-content {
         display: flex;
         flex-direction: column;
-        gap: 35px;
-        margin-bottom: 30px;
+        gap: 0;
+        margin-bottom: 8px;
     }
 
-    /* Branding Section */
     .footer-branding {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        flex: 0 0 auto;
         max-width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     .footer-logo {
-        width: 140px;
+        width: 150px;
         height: auto;
-        margin-bottom: 15px;
+        margin-bottom: 8px;
     }
 
     .footer-mission {
-        font-size: 13px;
-        line-height: 1.5;
+        font-size: 14px;
+        line-height: 1.6;
         color: #cccccc;
-        margin-bottom: 20px;
+        margin-bottom: 8px;
+        max-width: 320px;
     }
 
     .footer-socials {
         display: flex;
-        gap: 12px;
+        gap: 14px;
+        margin-bottom: 12px;
+        padding-bottom: 0;
     }
 
     .footer-social-button {
-        width: 40px;
-        height: 40px;
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
-        background-color: #ffffff;
+        background-color: #1f1f1f;
+        border: 1px solid #2a2a2a;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -60,22 +64,25 @@
     }
 
     .footer-social-button img {
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
         object-fit: contain;
         filter: grayscale(1) brightness(2) contrast(1.1);
     }
 
-    /* Quick Links Section */
     .footer-links {
         display: flex;
         flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 2px;
+        flex: 0 0 150px;
     }
 
     .footer-heading {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 600;
-        margin-bottom: 15px;
+        margin-top: 0;
+        margin-bottom: 10px;
         color: #ffffff;
     }
 
@@ -88,7 +95,7 @@
     .footer-link {
         color: #cccccc;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 14px;
         transition: color 0.2s ease;
     }
 
@@ -96,32 +103,31 @@
         color: #70A9A1;
     }
 
-    /* Hide desktop-only links on mobile */
     .footer-link-desktop {
         display: none;
     }
 
-    /* Show mobile-only links */
     .footer-link-mobile {
         display: block;
     }
 
-    /* Contact Section */
     .footer-contact {
         display: flex;
         flex-direction: column;
+        margin-top: 0;
+        flex: 0 0 150px;
     }
 
     .footer-contact-info {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
     }
 
     .footer-email {
         color: #70A9A1;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 500;
         word-break: break-all;
     }
@@ -130,20 +136,19 @@
         color: #8bc4bb;
     }
 
-    /* Bottom Section */
     .footer-bottom {
-        margin-top: 20px;
+        margin-top: 24px;
     }
 
     .footer-divider {
         height: 1px;
         background: linear-gradient(90deg, transparent 0%, #444444 50%, transparent 100%);
-        margin-bottom: 15px;
+        margin-bottom: 16px;
     }
 
     .footer-copyright {
         text-align: center;
-        font-size: 11px;
+        font-size: 12px;
         color: #888888;
         margin: 0;
     }

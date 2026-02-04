@@ -15,12 +15,10 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer-content">
-                {/* Left Column - Logo, Mission, Socials */}
                 <div className="footer-column footer-branding">
                     <img src={logo} alt="Connect MNG Logo" className="footer-logo" />
                     <p className="footer-mission">
-                        Empowering Mongolian American college students and young professionals to
-                        connect, learn, and thrive together.
+                        {intl.formatMessage({ id: "footerMission" })}
                     </p>
                     <div className="footer-socials">
                         <a
@@ -53,7 +51,6 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Middle Column - Quick Links */}
                 <div className="footer-column footer-links">
                     <h3 className="footer-heading">Quick Links</h3>
                     <nav className="footer-nav">
@@ -81,7 +78,6 @@ export default function Footer() {
                     </nav>
                 </div>
 
-                {/* Right Column - Contact */}
                 <div className="footer-column footer-contact">
                     <h3 className="footer-heading">Contact</h3>
                     <div className="footer-contact-info">
@@ -98,11 +94,10 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Bottom - Copyright */}
             <div className="footer-bottom">
                 <div className="footer-divider"></div>
                 <p className="footer-copyright">
-                    © 2023 ConnectMNG USA. All rights reserved.
+                    © 2025 ConnectMNG USA. All rights reserved.
                 </p>
             </div>
         </footer>
