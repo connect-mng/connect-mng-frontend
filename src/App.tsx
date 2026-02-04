@@ -9,7 +9,7 @@ import ResumeHelp from "./pages/Events/EventsPages/ResumeHelp/Resumehelp.jsx";
 import HappyHour from "./pages/Events/EventsPages/HappyHour/HappyHour.jsx"
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
-import Home from "./pages/Home/Home.jsx";
+import Home from "./pages/Home/Home";
 import Internships from "./pages/Internships/Internships.jsx";
 import MentorshipProgram from "./pages/Programs/ProgramPages/Mentorship/Mentorship.jsx";
 import Navigation from "./components/Navigation/Navigation.jsx";
