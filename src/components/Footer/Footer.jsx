@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useIntl } from "react-intl";
-import logo from "../../images/logo.png";
+import logo from "../../images/footer-logo.png";
 import fb2 from "../../images/socials/fb2.png";
 import insta2 from "../../images/socials/insta2.png";
 import linkedin2 from "../../images/socials/linkedin2.png";
@@ -19,8 +19,8 @@ export default function Footer() {
                 <div className="footer-column footer-branding">
                     <img src={logo} alt="Connect MNG Logo" className="footer-logo" />
                     <p className="footer-mission">
-                        Empowering the Mongolian community through connection,
-                        resources, and opportunities for growth and success.
+                        Empowering Mongolian American college students and young professionals to
+                        connect, learn, and thrive together.
                     </p>
                     <div className="footer-socials">
                         <a
@@ -102,7 +102,7 @@ export default function Footer() {
             <div className="footer-bottom">
                 <div className="footer-divider"></div>
                 <p className="footer-copyright">
-                    © 2024 Connect MNG. All rights reserved.
+                    © 2023 ConnectMNG USA. All rights reserved.
                 </p>
             </div>
         </footer>

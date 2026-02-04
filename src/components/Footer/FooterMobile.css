@@ -63,6 +63,7 @@
         width: 22px;
         height: 22px;
         object-fit: contain;
+        filter: grayscale(1) brightness(2) contrast(1.1);
     }
 
     /* Quick Links Section */

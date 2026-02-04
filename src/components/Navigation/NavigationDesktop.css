@@ -9,10 +9,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 48px;
-    max-width: 1400px;
-    margin: 0 auto;
+    padding: 26px 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     background: #ffffff;
+}
+
+.nav-logo-link {
+    padding-left: 64px;
+}
+
+.nav-menu {
+    padding-right: 64px;
 }
 
 .nav-logo-link {
@@ -22,14 +31,14 @@
 }
 
 .nav-logo {
-    height: 50px;
+    height: 96px;
     width: auto;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 52px;
 }
 
 .nav-item {
@@ -40,9 +49,9 @@
 
 .nav-link,
 .nav-button {
-    font-size: 16px;
-    font-weight: 500;
-    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+    color: #3c4654;
     text-decoration: none;
     background: none;
     border: none;
@@ -56,11 +65,11 @@
 
 .nav-link:hover,
 .nav-button:hover {
-    color: #70A9A1;
+    color: #2f3b4a;
 }
 
 .nav-chevron {
-    font-size: 14px;
+    font-size: 16px;
     margin-left: 2px;
 }
 

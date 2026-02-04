@@ -6,7 +6,7 @@ const translations = {
         getInvolved: "Get Involved",
         blogs: "Blogs",
         podcasts: "Podcast",
-        about: "About Us",
+        about: "About",
         resources: "Resources",
         contact: "Contact Us",
         home: "Home",
