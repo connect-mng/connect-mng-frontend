@@ -9,6 +9,7 @@ import anuujinC from "../../images/BoardMembers/AnuujinC.jpg";
 import selenge from "../../images/BoardMembers/Sissi.jpg";
 import erik from "../../images/Interns/erik.webp";
 import tuya from "../../images/Interns/tuya.jpg";
+
 import React from "react";
 import { useIntl } from "react-intl";
 
@@ -73,41 +74,34 @@ export default function BoardMemberGallery() {
           linkedIn: "https://www.linkedin.com/in/erkhemtugs-bayar-ochir-8263ba239"
         }} />
         <Profile person={{
-          name: "Tuyaa Saruul",
-          imageId: saruul,
+          name: "Munkhtuya Yadmaa",
+          imageId: tuya,
           position: "Web Developer",
           description: "",
-          linkedIn: "https://www.linkedin.com/in/saruul-erdene/"
+          linkedIn: "https://www.linkedin.com/in/munkhtuya-yadmaa-7270542b9/"
         }} />
         <Profile person={{
           name: "Nico",
           imageId: person,
-          position: "Marketing Director",
+          position: "Web Developer",
           description: "",
           linkedIn: "https://www.linkedin.com/in/badmaarag-batjargal-72a747174/"
         }} />
         <Profile person={{
           name: "Jason",
-          imageId: james,
+          imageId: person,
           position: "Web Developer",
           description: "",
           linkedIn: "https://www.linkedin.com/in/jkedwards8/"
         }} />
         <Profile person={{
           name: "Temuulen",
-          imageId: matthew,
+          imageId: person,
           position: "Web Developer",
           description: "",
           linkedIn: "https://www.linkedin.com/in/matthewbalgan/"
         }} />
-      </div> 
-        <Profile person={{
-          name: "Munkhtuya Yadmaa",
-          imageId:tuya,
-          position: "Intern",
-          description: "",
-          linkedIn: "https://www.linkedin.com/in/munkhtuya-yadmaa-7270542b9/"
-        }} />
+      </div>
     </div>
   );
 };
