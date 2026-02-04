@@ -1,12 +1,4 @@
-import saruul from "../../images/BoardMembers/Saruul-Erdene.JPEG";
 import person from "../../images/BoardMembers/person.avif";
-import james from "../../images/BoardMembers/James.JPG";
-import matthew from "../../images/BoardMembers/Matthew.jpg";
-import tsogo from "../../images/BoardMembers/Bayartsogt.jpg";
-import batsuuri from "../../images/BoardMembers/Batsuuri.png";
-import bilguun from "../../images/BoardMembers/Bilguun.png";
-import anuujinC from "../../images/BoardMembers/AnuujinC.jpg";
-import selenge from "../../images/BoardMembers/Sissi.jpg";
 import erik from "../../images/Interns/erik.webp";
 import tuya from "../../images/Interns/tuya.jpg";
 
