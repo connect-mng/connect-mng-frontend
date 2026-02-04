@@ -1,8 +1,9 @@
 import React from "react";
-import TimelineCard from "../Timeline/TimelineCard";
 import "./Timeline.css";
+import TimelineCard from "./TimelineCard";
+import { timelineData } from "./constants";
 
-interface TimelineItem {
+export interface TimelineItem {
   year: string;
   title: string;
   description: string;
@@ -10,15 +11,19 @@ interface TimelineItem {
 }
 
 interface TimelineProps {
-  items: TimelineItem[];
+  items?: TimelineItem[];
 }
 
-const Timeline: React.FC<TimelineProps> = ({ items }) => {
+const Timeline: React.FC<TimelineProps> = ({ items = timelineData }) => {
   return (
     <div className="timeline-container">
       <div className="timeline-line" />
-      {items.map((item, idx) => (
-        <div key={idx} className={`timeline-card-wrapper ${item.position}`}>
+
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className={`timeline-card-wrapper ${item.position}`}
+        >
           <TimelineCard {...item} />
           <div className="timeline-dot" />
         </div>
