@@ -8,6 +8,7 @@
     background-color: white;
     max-width: 987px;
     width: 100%;
+    
 
     padding: 40px 24px;
     border-radius: 16px;
@@ -27,7 +28,7 @@
 }
 
 .impactDescription {
-    width: 672px;
+    max-width: 672px;
     height: 100%;
     color: #4A5E7A;
 

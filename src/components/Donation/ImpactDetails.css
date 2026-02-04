@@ -1,8 +1,13 @@
 .container {
-    display: flex;
-    justify-content: center;   /* centers items as a group */
-    gap: 24px;                 /* space between cards */
-  
-    padding: 0 24px;           /* equal left & right spacing from screen */
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 260px);
+
+  column-gap: 32px;
+  row-gap: 32px;
+
+  justify-content: center;   
+
+  width: 100%;
+  max-width: 958px;
+  margin: 0 auto;
+}
