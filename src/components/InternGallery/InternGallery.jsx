@@ -1,6 +1,8 @@
 import person from "../../images/BoardMembers/person.avif";
 import erik from "../../images/Interns/erik.webp";
 import tuya from "../../images/Interns/tuya.jpg";
+import niko from "../../images/Interns/niko.jpg";
+
 
 import React from "react";
 import { useIntl } from "react-intl";
@@ -73,11 +75,11 @@ export default function BoardMemberGallery() {
           linkedIn: "https://www.linkedin.com/in/munkhtuya-yadmaa-7270542b9/"
         }} />
         <Profile person={{
-          name: "Nico",
-          imageId: person,
+          name: "Nyambileg Ganbaatar",
+          imageId: niko,
           position: "Web Developer",
           description: "",
-          linkedIn: "https://www.linkedin.com/in/badmaarag-batjargal-72a747174/"
+          linkedIn: "https://www.linkedin.com/in/nyambileg-ganbaatar-053482183/"
         }} />
         <Profile person={{
           name: "Jason",
