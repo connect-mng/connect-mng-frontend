@@ -1,0 +1,13 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 260px);
+
+  column-gap: 32px;
+  row-gap: 32px;
+
+  justify-content: center;   
+
+  width: 100%;
+  max-width: 958px;
+  margin: 0 auto;
+}
