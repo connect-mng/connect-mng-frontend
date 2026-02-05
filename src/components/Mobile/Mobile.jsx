@@ -39,8 +39,8 @@ export default function Mobile() {
                         <img src={logo} alt={"Connect MNG Logo"} className={"logo"} />
                     </Link>
                 </div>
-                <button onClick={handleClick}>
-                    <Hamburger toggled={showMenu} direction="left" size={20} area={10} color="black" duration={0.4} />
+                <button className="mobile-menu-button" onClick={handleClick} aria-label="Toggle navigation menu">
+                    <Hamburger toggled={showMenu} direction="left" size={22} color="#3c4654" duration={0.4} />
                 </button>
 
 
