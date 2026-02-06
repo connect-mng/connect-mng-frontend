@@ -100,7 +100,6 @@ export default function BoardMemberGallery() {
           description: "",
           linkedIn: "https://www.linkedin.com/in/matthewbalgan/"
         }} />
-      </div> 
         <Profile person={{
           name: "Munkhtuya Yadmaa",
           imageId:tuya,
@@ -108,6 +107,7 @@ export default function BoardMemberGallery() {
           description: "",
           linkedIn: "https://www.linkedin.com/in/munkhtuya-yadmaa-7270542b9/"
         }} />
+      </div> 
     </div>
   );
 };

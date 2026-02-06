@@ -94,14 +94,14 @@
 .galleryHeader h1 {
   font-family: Inter;
   font-weight: 700;
-  font-size: 34px;
-  line-height: 100%;
+  font-size: 20px;
+  line-height: 30px;
   letter-spacing: 0%;
   padding-bottom: 20px;
 }
 
 .galleryHeader div {
-  font-size: calc(1px + 1.75vw);
+  font-size: 16px;
 }
 
 .galleryContainer {
