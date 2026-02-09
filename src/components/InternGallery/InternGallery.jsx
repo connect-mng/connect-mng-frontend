@@ -1,14 +1,9 @@
-import saruul from "../../images/BoardMembers/Saruul-Erdene.JPEG";
 import person from "../../images/BoardMembers/person.avif";
-import james from "../../images/BoardMembers/James.JPG";
-import matthew from "../../images/BoardMembers/Matthew.jpg";
-import tsogo from "../../images/BoardMembers/Bayartsogt.jpg";
-import batsuuri from "../../images/BoardMembers/Batsuuri.png";
-import bilguun from "../../images/BoardMembers/Bilguun.png";
-import anuujinC from "../../images/BoardMembers/AnuujinC.jpg";
-import selenge from "../../images/BoardMembers/Sissi.jpg";
-import erik from "../../images/Interns/erik.webp";
+import erik from "../../images/Interns/erik.jpg";
 import tuya from "../../images/Interns/tuya.jpg";
+import niko from "../../images/Interns/niko.jpg";
+
+
 import React from "react";
 import { useIntl } from "react-intl";
 
@@ -70,36 +65,31 @@ export default function BoardMemberGallery() {
           imageId: erik,
           position: "Web Developer",
           description: "",
-          linkedIn: "https://www.linkedin.com/in/erkhemtugs-bayar-ochir-8263ba239"
+          linkedIn: "https://www.linkedin.com/in/tem-amaraa/"
         }} />
-        <Profile person={{
-          name: "Tuyaa Saruul",
-          imageId: saruul,
+        
+                <Profile person={{
+          name: "Nyambileg Ganbaatar",
+          imageId: niko,
           position: "Web Developer",
           description: "",
-          linkedIn: "https://www.linkedin.com/in/saruul-erdene/"
-        }} />
-        <Profile person={{
-          name: "Nico",
-          imageId: person,
-          position: "Marketing Director",
-          description: "",
-          linkedIn: "https://www.linkedin.com/in/badmaarag-batjargal-72a747174/"
+          linkedIn: "https://www.linkedin.com/in/nyambileg-ganbaatar-053482183/"
         }} />
         <Profile person={{
           name: "Jason",
-          imageId: james,
+          imageId: person,
           position: "Web Developer",
           description: "",
           linkedIn: "https://www.linkedin.com/in/jkedwards8/"
         }} />
         <Profile person={{
           name: "Temuulen",
-          imageId: matthew,
+          imageId: person,
           position: "Web Developer",
           description: "",
           linkedIn: "https://www.linkedin.com/in/matthewbalgan/"
         }} />
+
         <Profile person={{
           name: "Munkhtuya Yadmaa",
           imageId:tuya,
@@ -108,6 +98,8 @@ export default function BoardMemberGallery() {
           linkedIn: "https://www.linkedin.com/in/munkhtuya-yadmaa-7270542b9/"
         }} />
       </div> 
-    </div>
+
+      </div>
+    
   );
 };
