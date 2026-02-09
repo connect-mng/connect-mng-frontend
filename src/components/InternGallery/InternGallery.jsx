@@ -1,7 +1,8 @@
 import person from "../../images/BoardMembers/person.avif";
-import erik from "../../images/Interns/erik.jpg";
+import erik from "../../images/Interns/erik.webp";
 import tuya from "../../images/Interns/tuya.jpg";
 import niko from "../../images/Interns/niko.jpg";
+import tem from "../../images/Interns/tem.jpg";
 
 
 import React from "react";
@@ -84,10 +85,10 @@ export default function BoardMemberGallery() {
         }} />
         <Profile person={{
           name: "Temuulen",
-          imageId: person,
+          imageId: tem,
           position: "Web Developer",
           description: "",
-          linkedIn: "https://www.linkedin.com/in/matthewbalgan/"
+          linkedIn: "https://www.linkedin.com/in/tem-amaraa/"
         }} />
 
         <Profile person={{
