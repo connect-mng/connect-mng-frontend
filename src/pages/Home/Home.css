@@ -15,8 +15,8 @@
 	justify-content: center;
 	align-items: center;
 	padding-top: calc(1rem + 2vw);
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 .carouselContainer {
@@ -53,6 +53,12 @@
 .missionTextContainer p {
 	font-size: 1.2vw;
 	width: 45vw;
+}
+
+.PageHeader {
+	width: 100%;
+	align-self: stretch;
+	margin-top: calc(-1 * (1rem + 2vw));
 }
 
 .program {
@@ -120,11 +126,12 @@
 	}
 
 	.homeContainer {
-		padding: 30px 20px;
+		padding: 0px 0px;
 	}
 
 	.missionTextContainer {
 		text-align: initial;
+		padding: 30px 20px;
 	}
 
 	.missionTextContainer h1 {
@@ -142,6 +149,7 @@
 		display: flex;
 		justify-content: flex-start;
 		margin-bottom: 3vw;
+		padding: 30px 20px;
 	}
 
 	.programGalleryContainer h1 {
@@ -149,6 +157,7 @@
 		font-size: calc(0.5rem + 2.5vw);
 		color: #033C26;
 		justify-content: flex-start;
+		padding: 10px 20px;
 	}
 
 	.programImage {
@@ -172,11 +181,12 @@
 	}
 
 	.carouselSlide img {
-		border-radius: 10px 10px 0 0
+		border-radius: 10px 10px 0px 0px;
 	}
 
 	.carouselContainer {
 		width: 90vw;
 		margin-bottom: 0px;
+		padding: 30px 20px;
 	}
 }

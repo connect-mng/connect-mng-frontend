@@ -1,0 +1,165 @@
+/*.ourStoryCard {
+    min-height: 440px;
+    border-radius: 14px;
+  }
+
+  .ourStoryCard__body {
+    max-width: 100%;
+  }
+
+  .ourStoryCard__buttons {
+    width: 100%;
+    gap: 12px;
+}*/
+@media (max-width: 768px) {
+    .ourStoryCard {
+      width: 100%;
+      min-height: 80svh; /* better than 100vh on mobile */
+      border-radius: 0;
+      overflow: hidden;
+      position: relative;
+  
+      /* background image comes from inline style */
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+  
+      /* layout like screenshot */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      padding: 92px 20px 44px;
+  
+      color: #fff;
+      text-align: center;
+    }
+  
+    /* uses your existing overlay div + overlayOpacity variable */
+    .ourStoryCard__overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: var(--overlayOpacity, 0.55);
+    }
+  
+    .ourStoryCard__inner {
+      position: relative;
+      z-index: 1;
+  
+      width: 100%;
+      max-width: 420px;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1; /* lets buttons push down */
+    }
+  
+    .ourStoryCard__pill {
+      align-self: center;     
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      margin-top: 100px;
+    }
+  
+    /* green target-dot like screenshot */
+    .ourStoryCard__dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      position: relative;
+      flex: 0 0 auto;
+  
+      border: 2px solid #a7d24c;
+    }
+    .ourStoryCard__dot::after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border-radius: 999px;
+      border: 2px solid #a7d24c;
+      opacity: 0.9;
+    }
+    .ourStoryCard__dot::before {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: #a7d24c;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .ourStoryCard__pillText {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.92);
+    }
+  
+    .ourStoryCard__title {
+      margin: 0 0 18px;
+      font-size: 25px;
+      line-height: 1.12;
+      font-weight: 500;
+      width: 100%;
+      text-align: center !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    /* paragraph block: readable + left aligned like screenshot */
+    .ourStoryCard__body {
+      margin: 0;
+      width: 361.729736328125px;
+      max-width: 100%;
+        
+      text-align: left;
+      font-size: 16px;
+      line-height: 26px;
+      color: rgba(255, 255, 255, 0.86);
+      padding: 0;
+    }
+  
+    /* buttons stacked + centered near bottom */
+    .ourStoryCard__buttons {
+      margin-top: 10px;
+      width: 100%;
+      padding-top: 10px;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+  
+    .ourStoryCard__buttons > * {
+      width: min(360px, 100%);
+    }
+  
+    /* optional: if your Button renders <a> or <button> inside */
+    .ourStoryCard__buttons a,
+    .ourStoryCard__buttons button {
+      border-radius: 16px;
+      min-height: 56px;
+    }
+  
+    /* alignment overrides if you ever use align="left" */
+    .ourStoryCard--left {
+      text-align: left;
+      align-items: flex-start;
+    }
+    .ourStoryCard--left .ourStoryCard__inner {
+      align-items: flex-start;
+    }
+    .ourStoryCard--left .ourStoryCard__pill {
+      justify-content: flex-start;
+    }
+    .ourStoryCard--left .ourStoryCard__buttons {
+      align-items: flex-start;
+    }
+  
+}

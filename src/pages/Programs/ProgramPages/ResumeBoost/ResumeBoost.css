@@ -1,25 +1,26 @@
-.resumeBoostContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+/* ✅ Home-style page wrapper */
+.resumeBoostPage {
   background-image: url("../../../../images/background_green.jpg");
   background-size: cover;
   background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding-top: calc(1rem + 2vw);
-  padding-left: 75px;
+  padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 15px;
+
   overflow-x: hidden;
 }
 
-/* Header — matches Programs page style */
-.resumeBoostHeader h1 {
-  font-size: calc(5px + 1.75vw);
-  font-weight: bold;
-}
-
-.resumeBoostHeader p {
-  font-size: calc(1px + 1.2vw);
-  width: 50vw;
+/* ✅ Home-style content wrapper */
+.resumeBoostContent {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Body content */
@@ -65,12 +66,12 @@
   display: block;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 🔥 smooth hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .programImage:hover {
-  transform: scale(1.08); /* ✅ enlarge slightly on hover */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35); /* deeper shadow */
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
 /* Utilities */
@@ -92,40 +93,34 @@
     display: none;
   }
 
-  .resumeBoostContainer {
+  .resumeBoostPage {
     background-image: url("../../../../images/background_white.jpg");
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-size: cover;
-    background-position: center;
     padding: 30px 20px;
     background-color: white;
-    padding-top: 15px;
   }
 
-  .resumeBoostHeader h1 {
-    font-size: calc(8px + 1.75vw);
-    font-weight: bold;
-    padding-top: 4vw;
-  }
-
-  .resumeBoostHeader p {
-    font-size: calc(7px + 1.2vw);
-    padding-left: 1.3vw;
-    padding-top: 2vw;
-    text-align: left;
-    width: 96vw;
+  .resumeBoostContent {
+    width: 100%;
   }
 
   .indivProgramContainer {
+    flex-direction: column;
     padding-top: 15px;
+    gap: 18px;
+  }
+
+  .indivProgramTextContainer {
     width: 100%;
   }
 
   .programDescription {
-    width: 90vw;
-    text-align: justify;
+    width: 100%;
     font-size: calc(7px + 1.2vw);
+  }
+
+  .programImage {
+    width: 100%;
+    height: auto !important;
+    max-width: 420px;
   }
 }

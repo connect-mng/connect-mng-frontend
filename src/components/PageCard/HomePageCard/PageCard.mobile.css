@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+    .homePageCard--hero {
+      min-height: 220px;
+    }
+  
+    .homePageCard__content {
+      max-width: 100%;
+    }
+  
+    .homePageCard__body {
+      max-width: 100%;
+    }
+
+    .pageCard__ctaButton.appButton--primary {
+        background: #9ab66a;
+        color: #ffffff;
+        border: none;
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+    }
+    
+    .pageCard__ctaButton {
+        width: 100%;
+        justify-content: center;
+    }
+  }

@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+    .ourTeamCard.ourTeamCard--center .ourTeamCard__inner,
+    .ourTeamCard.ourTeamCard--left .ourTeamCard__inner {
+      align-items: center;
+      text-align: center;
+    }
+  }

@@ -1,0 +1,63 @@
+/*@media (max-width: 768px) {
+    .podcastsHeroCard {
+      border-radius: 14px;
+    }
+  
+    .podcastsHeroCard__inner {
+      flex-direction: column;
+      align-items: flex-start; 
+      gap: 18px;
+    }
+  
+    .podcastsHeroCard__right {
+      width: 100%;
+      order: 2;
+      justify-content: center;  
+    }
+  
+    .podcastsHeroCard__left {
+      width: 100%;
+      order: 3;
+      max-width: none;
+    }
+  
+    .podcastsHeroCard__pill {
+      margin-bottom: 14px;
+      order: 1;
+    }
+  
+    .podcastsHeroCard__title {
+      margin-top: 6px;
+    }
+  
+    .podcastsHeroCard__cover {
+      width: min(340px, 100%); 
+      height: auto;
+      aspect-ratio: 1 / 1;
+      border-radius: 18px;
+    }
+  }*/
+  @media (max-width: 768px) {
+    .podcastsHeroCard__inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+  
+    /* show the mobile pill, hide the desktop pill */
+    .podcastsHeroCard__pill--desktop { display: none; }
+    .podcastsHeroCard__pill--mobile  { display: inline-flex; color: #fff; }
+  
+    /* ✅ order now works because pill--mobile is a direct child of __inner */
+    .podcastsHeroCard__pill--mobile { order: 1; }
+    .podcastsHeroCard__right { order: 2; width: 100%; justify-content: center; }
+    .podcastsHeroCard__left  { order: 3; width: 100%; max-width: none; }
+  
+    .podcastsHeroCard__cover {
+      width: min(340px, 100%);
+      height: auto;
+      aspect-ratio: 1 / 1;
+    }
+  }
+  
+  

@@ -1,0 +1,11 @@
+.eventsCard--hero {
+    min-height: 440px;
+  }
+
+  .eventsCard__content {
+    max-width: 100%;
+  }
+
+  .eventsCard__body {
+    max-width: 100%;
+  }
