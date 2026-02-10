@@ -7,24 +7,24 @@
               0px 10px 15px -3px #0000001a;
 }
 
-/* Inner container */
+
 .timeline-card-inner {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-/* LEFT cards */
+
 .timeline-card.left {
   text-align: left;
 }
 
-/* RIGHT cards */
+
 .timeline-card.right {
   text-align: right;
 }
 
-/* Year */
+
 .timeline-year {
   font-size: 30px;
   line-height: 36px;
@@ -33,7 +33,7 @@
   font-weight: 400;
 }
 
-/* Title */
+
 .timeline-title {
   font-size: 16px;
   line-height: 24px;
@@ -43,7 +43,7 @@
   margin: 0;
 }
 
-/* Description */
+
 .timeline-description {
   font-size: 14px;
   line-height: 24px;

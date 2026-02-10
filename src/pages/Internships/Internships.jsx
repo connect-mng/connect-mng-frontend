@@ -13,7 +13,6 @@ export default function Internships() {
 	const intl = useIntl();
 
 	return (
-		
 		<div className={"internshipsContainer"}>
 			<div className={"internshipsGetInvolved only-mobile"}>
 				<img className={"homeIcon"} src={homeIcon} alt="Home icon"/>
