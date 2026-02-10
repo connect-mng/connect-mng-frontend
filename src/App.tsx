@@ -1,5 +1,5 @@
 import OurTeam from "./pages/About/OurTeam/OurTeam.jsx";
-import OurStory from "./pages/About/OurStory/OurStory.jsx";
+import OurStory from "./pages/About/OurStory/OurStory";
 import Blogs from "./pages/Blogs/Blogs.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import CulturalCompassProgram from "./pages/Programs/ProgramPages/CulturalCompass/CulturalCompass.jsx";
