@@ -1,8 +1,14 @@
 import React from "react";
 import "./TimelineCard.css";
-import { TimelineItem } from "./Timeline";
 
-const TimelineCard: React.FC<TimelineItem> = ({
+export interface TimelineCardProps {
+  year: string;
+  title: string;
+  description: string;
+  position: "left" | "right";
+}
+
+const TimelineCard: React.FC<TimelineCardProps> = ({
   year,
   title,
   description,
@@ -10,10 +16,8 @@ const TimelineCard: React.FC<TimelineItem> = ({
 }) => {
   return (
     <div className={`timeline-card ${position}`}>
-      <div className="timeline-card-header">
-        <span className="timeline-year">{year}</span>
-        <h3 className="timeline-title">{title}</h3>
-      </div>
+      <span className="timeline-year">{year}</span>
+      <h3 className="timeline-title">{title}</h3>
       <p className="timeline-description">{description}</p>
     </div>
   );
