@@ -1,0 +1,425 @@
+@media (min-width: 769px) {
+    .ourStoryTitleContainer {
+    text-align: left;
+    padding: 6rem 4rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    padding: 8rem 4rem 6rem;
+    }
+
+    .ourStoryTitleContainer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 58, 95, 0.75);
+    z-index: 0;
+    }
+
+    .ourStoryTitleContainer > * {
+    position: relative;
+    z-index: 1;
+    }
+
+    .ourStoryTitleContainer h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 30px;
+    }
+
+    .ourStoryBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    padding-top: 50px;
+    padding: 0.4rem 1rem;
+    font-size: 0.875rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    }
+
+    .ourStoryIntro {
+    font-size: 16px;
+    max-width: 800px;
+    margin: 0 0 0 0;
+    line-height: 26px;
+    color: #e5e7eb;
+    font-weight: 400;
+    }
+
+    .ourStoryButtons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    }
+
+    .ourStoryButtons button {
+    margin: 0; 
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
+    
+    #joinCommunityButton {
+    background-color: #8FB369;
+    color: #fff;
+    border: none;
+    }
+
+    #learnMoreButton {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    }
+
+    .chapter1Container {
+    display: flex;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background-color: #fff;
+    align-items: flex-start;
+    }
+
+    .chapter1Text {
+    flex: 1;
+    padding-right: 0;
+    }
+
+    .chapter1Text h2 {
+    font-size: 1.25rem;
+    color: #1F2937;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    }
+
+    .chapter1Text p {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+    }
+
+    .chapter1Image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    }
+
+    .chapter1Image img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    object-fit: cover;
+    }
+
+    .ourJourneyContainer {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #FAFAFA;
+    }
+
+    .ourJourneyContainer h2 {
+    font-size: 1.25rem;
+    color: #1F2937;
+    margin-bottom: 0.5rem;
+    }
+
+    .ourJourneyContainer > p {
+    color: #6B7280;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    }
+
+    .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 1rem 0;
+    }
+
+    .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #D1D5DB;
+    transform: translateX(-50%);
+    }
+
+    .timelineItem {
+    position: relative;
+    display: flex;
+    margin-bottom: 3rem;
+    align-items: center;
+    }
+
+    .timelineItem.left {
+    justify-content: flex-start;
+    padding-right: 55%;
+    }
+
+    .timelineItem.right {
+    justify-content: flex-end;
+    padding-left: 55%;
+    }
+
+    .timelineContent {
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    }
+
+    .timelineYear {
+    font-size: 1.75rem;
+    color: #8FB369;
+    font-weight: 400;
+    margin: 0 0 0.25rem;
+    }
+
+    .timelineTitle {
+    font-size: 1rem;
+    color: #1F2937;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    }
+
+    .timelineDescription {
+    font-size: 0.9rem;
+    color: #6B7280;
+    line-height: 1.6;
+    margin: 0;
+    }
+
+    .timelineDot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #5C7556;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #D1D5DB;
+    z-index: 1;
+    }
+
+    .chapter2Container {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    }
+
+    .chapter2Grid {
+    display: flex;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: flex-start;
+    }
+
+    .chapter2Posters {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    }
+
+    .posterRow {
+    display: flex;
+    gap: 0.75rem;
+    }
+
+    .posterImg {
+    flex: 1;
+    width: 50%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    aspect-ratio: 4/5;
+    }
+
+    .chapter2Text {
+    flex: 1;
+    }
+
+    .chapter2Text h2 {
+    font-size: 1.5rem;
+    color: #1F2937;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    }
+
+    .chapter2Text p {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+    }
+
+    .chapter3Container {
+    display: flex;
+    gap: 0;
+    max-width: 1100px;
+    margin: 3rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    }
+
+    .chapter3Text {
+    flex: 1;
+    padding: 3rem;
+    }
+
+    .chapter3Text h2 {
+    font-size: 1.25rem;
+    color: #1F2937;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    }
+
+    .chapter3Text p {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+    }
+
+    .chapter3Buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    }
+
+    #becomeMemberButton {
+    background-color: #5C7556;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    }
+
+    #supportMissionButton {
+    background-color: transparent;
+    color: #374151;
+    border: 2px solid #374151;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    }
+
+    .chapter3Card {
+    flex: 1;
+    background: linear-gradient(160deg, #4A6B7C 0%, #6B8F71 50%, #8FA87A 100%);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    }
+
+    .chapter3Arrow {
+    margin-bottom: 1.5rem;
+    }
+
+    .chapter3Card h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #fff;
+    }
+
+    .chapter3Card p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.75rem;
+    max-width: 320px;
+    }
+
+    .ourStoryConclusionContainer {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(160deg, #7A9A5C 0%, #8FA87A 40%, #9BAF82 100%);
+    color: #fff;
+    }
+
+    .conclusionHeart {
+    margin-bottom: 1rem;
+    }
+
+    .ourStoryConclusionContainer h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 1rem;
+    }
+
+    .ourStoryConclusionContainer p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.75;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    }
+
+    .conclusionButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    }
+
+    #getInvolvedButton {
+    background-color: #fff;
+    color: #5C7556;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    }
+
+    #contactUsButton {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    }
+
+    /* Responsive (for OurStoryMobile.css) */
+    @media (max-width: 768px) {
+    .chapter1Container, .chapter2Grid, .chapter3Container {
+        flex-direction: column;
+    }
+    }
+}

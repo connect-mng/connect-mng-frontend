@@ -1,0 +1,377 @@
+@media (max-width: 768px) {
+  .ourStoryTitleContainer {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+  }
+
+  .ourStoryTitleContainer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 58, 95, 0.75);
+    z-index: 0;
+  }
+
+  .ourStoryTitleContainer > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .ourStoryTitleContainer h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .ourStoryBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .ourStoryIntro {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #e5e7eb;
+    margin-bottom: 2rem;
+  }
+
+  .ourStoryButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .ourStoryButtons button {
+    width: 70%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  #joinCommunityButton {
+    background-color: transparent;
+    color: #8FB369;
+    border: 2px solid #8FB369;
+  }
+
+  #learnMoreButton {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  .chapter1Container {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .chapter1Text {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .chapter1Text h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .chapter1Text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .chapter1Image {
+    width: 100%;
+  }
+
+  .chapter1Image img {
+    width: 100%;
+    border-radius: 1.25rem;
+  }
+
+  .ourJourneyContainer {
+    padding: 3.5rem 1.5rem;
+    text-align: center;
+    background-color: #FAFAFA;
+    overflow: hidden;
+  }
+
+  .ourJourneyContainer h2 {
+    font-size: 1.125rem;
+    color: #1F2937;
+  }
+
+  .ourJourneyContainer > p {
+    color: #6B7280;
+    font-size: 0.95rem;
+  }
+
+  .timeline {
+    margin-top: 2rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timelineItem {
+    display: block;
+    margin-bottom: 1.25rem;
+    padding: 0;
+  }
+
+  .timelineItem.left,
+  .timelineItem.right {
+    padding: 0;
+  }
+
+  .timelineDot {
+    display: none;
+  }
+
+  .timelineContent {
+    width: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-left: none;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1.25rem;
+    background: #fff;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.04);
+    border: 1px solid #F0F0F0;
+    text-align: left;
+  }
+
+  .timelineYear {
+    font-size: 1.75rem;
+    color: #8FB369;
+    font-weight: 400;
+    margin: 0 0 0.25rem;
+  }
+
+  .timelineTitle {
+    font-size: 1rem;
+    color: #1F2937;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+  }
+
+  .timelineDescription {
+    font-size: 0.9rem;
+    color: #6B7280;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .chapter2Container {
+    padding: 2rem 1.5rem;
+    overflow: hidden;
+  }
+
+  .chapter2Grid {
+    display: flex;
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+
+  .chapter2Text {
+    order: -1;
+  }
+
+  .chapter2Text h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .chapter2Text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .chapter2Posters {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .posterCol {
+    flex: 1;
+    gap: 0.4rem;
+    min-width: 0;
+  }
+
+  .posterImg {
+    width: 100%;
+    border-radius: 0.4rem;
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .posterTall,
+  .posterShort {
+    height: auto;
+  }
+
+  .chapter3Container {
+    flex-direction: column;
+    margin: 2rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+
+  .chapter3Text {
+    padding: 2rem 1.5rem;
+  }
+
+  .chapter3Text h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .chapter3Text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .chapter3Buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  #becomeMemberButton {
+    background-color: #5C7556;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  #supportMissionButton {
+    background-color: transparent;
+    color: #374151;
+    border: 2px solid #374151;
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .chapter3Card {
+    padding: 3rem 2rem;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(160deg, #4A6B7C 0%, #6B8F71 50%, #8FA87A 100%);
+  }
+
+  .chapter3Arrow {
+    margin-bottom: 1.5rem;
+  }
+
+  .chapter3Card h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  .chapter3Card p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+    max-width: 320px;
+  }
+
+  .ourStoryConclusionContainer {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: linear-gradient(160deg, #7A9A5C 0%, #8FA87A 40%, #9BAF82 100%);
+    color: #fff;
+  }
+
+  .conclusionHeart {
+    margin-bottom: 1rem;
+  }
+
+  .ourStoryConclusionContainer h2 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .ourStoryConclusionContainer p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.75;
+    max-width: 100%;
+    margin: 0 auto 2rem;
+  }
+
+  .conclusionButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  #getInvolvedButton {
+    background-color: #fff;
+    color: #5C7556;
+    border: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 80%;
+  }
+
+  #contactUsButton {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 0.85rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 80%;
+  }
+}
