@@ -2,9 +2,9 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { useState } from "react";
 import PaypalButton from "./PaypalButton";
-import { ImpactSection } from "../../components/Donation/ImpactSection";
-import { DetailBox } from "../../components/Donation/ImpactDetailBox";
-import { ImpactDetail } from "../../components/Donation/ImpactDetails";
+import { ImpactSection } from "../../components/DonationImpactSection/ImpactSection";
+import { DetailBox } from "../../components/DonationImpactSection/ImpactDetailBox";
+import { ImpactDetail } from "../../components/DonationImpactSection/ImpactDetails";
 import "./Donate.css";
 
 export default function Donate() {
