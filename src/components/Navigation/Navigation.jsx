@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 
 import "./NavigationDesktop.css";
 import "./NavigationMobile.css";
-import Mobile from "../Mobile/Mobile.jsx";
+import Mobile from "../MobileDropdown/Mobile.jsx";
 
 export default function Navigation() {
 	const intl = useIntl();

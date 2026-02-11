@@ -5,58 +5,38 @@ import MobileNavDropdown from "./MobileNavDropdown.jsx";
 import { GoTriangleDown } from "react-icons/go";
 
 import { useIntl } from "react-intl";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function MobileDropdown() {
-
     const intl = useIntl();
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [showPrograms, setShowPrograms] = useState(false);
-    const [showActivities, setShowActivities] = useState(false);
-    const [showAbout, setShowAbout] = useState(false);
-
-    function handleNavLinkSelect(activeIndex) {
-        setActiveIndex(activeIndex);
-        setShowActivities(false);
-        setShowPrograms(false);
-        setShowAbout(false);
+    const dropdownIds = {
+        about: "about",
+        programs: "programs",
+        getInvolved: "getInvolved",
     };
+    const [openDropdown, setOpenDropdown] = useState(null);
 
-    function handleVolunteerSelect() {
-        setShowActivities(!showActivities);
-        setShowPrograms(false);
-        setShowAbout(false);
-    };
-
-    const handleAboutSelect = () => {
-        setShowAbout(!showAbout);
-        setShowActivities(false);
-        setShowPrograms(false);
+    function toggleDropdown(id) {
+        setOpenDropdown((current) => (current === id ? null : id));
     }
 
-    function handleProgramsSelect() {
-        setShowPrograms(!showPrograms);
-        setShowActivities(false);
-        setShowAbout(false);
-    };
-
-    function handleDropdownSelect(selectedIndex) {
-        setShowActivities(false);
-        setShowPrograms(false);
-        setShowAbout(false);
-        setActiveIndex(selectedIndex + 6)
+    function closeDropdown() {
+        setOpenDropdown(null);
     }
 
     return (
         <div className="mobileNavBarContainer">
             <div className="mobileNavLinks">
-                <div className={"mobileNavLink mobileNavLinkDropdown"} onClick={handleAboutSelect}>
+                <div
+                    className={"mobileNavLink mobileNavLinkDropdown"}
+                    onClick={() => toggleDropdown(dropdownIds.about)}
+                >
                     <span className="mobileNavText">{intl.formatMessage({ id: "about" })}</span>
                     <GoTriangleDown className="mobileNavChevron" />
                 </div>
-                {showAbout ? (
+                {openDropdown === dropdownIds.about ? (
                     <MobileNavDropdown
-                        onSelect={(selectedIndex) => handleDropdownSelect(selectedIndex)}
+                        onSelect={closeDropdown}
                         options={[
                             intl.formatMessage({ id: "ourStory" }),
                             intl.formatMessage({ id: "ourTeam" }),
@@ -69,13 +49,16 @@ export default function MobileDropdown() {
                 <Link to="/resources/blogs" className="mobileNavLink">{intl.formatMessage({ id: "blogs" })}</Link>
                 <Link to="/events" className="mobileNavLink">{intl.formatMessage({ id: "events" })}</Link>
                 <Link to="/resources/podcasts" className="mobileNavLink">{intl.formatMessage({ id: "podcasts" })}</Link>
-                <div className={"mobileNavLink mobileNavLinkDropdown"} onClick={handleProgramsSelect}>
+                <div
+                    className={"mobileNavLink mobileNavLinkDropdown"}
+                    onClick={() => toggleDropdown(dropdownIds.programs)}
+                >
                     <span className="mobileNavText">{intl.formatMessage({ id: "programs" })}</span>
                     <GoTriangleDown className="mobileNavChevron" />
                 </div>
-                {showPrograms ? (
+                {openDropdown === dropdownIds.programs ? (
                     <MobileNavDropdown
-                        onSelect={(selectedIndex) => handleDropdownSelect(selectedIndex)}
+                        onSelect={closeDropdown}
                         options={[
                             intl.formatMessage({ id: "culturalCompass" }),
                             intl.formatMessage({ id: "mentorship" }),
@@ -89,13 +72,16 @@ export default function MobileDropdown() {
                     />
                 ) : null}
 
-                <div className={"mobileNavLink mobileNavLinkDropdown"} onClick={handleVolunteerSelect}>
+                <div
+                    className={"mobileNavLink mobileNavLinkDropdown"}
+                    onClick={() => toggleDropdown(dropdownIds.getInvolved)}
+                >
                     <span className="mobileNavText">{intl.formatMessage({ id: "getInvolved" })}</span>
                     <GoTriangleDown className="mobileNavChevron" />
                 </div>
-                {showActivities ? (
+                {openDropdown === dropdownIds.getInvolved ? (
                     <MobileNavDropdown
-                        onSelect={(selectedIndex) => handleDropdownSelect(selectedIndex)}
+                        onSelect={closeDropdown}
                         options={[
                             intl.formatMessage({ id: "donate" }),
                             intl.formatMessage({ id: "internships" }),
@@ -110,7 +96,5 @@ export default function MobileDropdown() {
                 ) : null}
             </div>
         </div>
-    )
-
-
+    );
 }
