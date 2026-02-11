@@ -106,40 +106,4 @@
 
 .galleryContainer {
   width: 100%
-<<<<<<< HEAD
-}
-
-/* Adjustments for smaller screens */
-@media screen and (max-width: 750px) {
-  .profile {
-    flex: 1 1 calc(100% - 10px);
-    aspect-ratio: unset;
-    min-height: 70vw;
-  }
-
-  .linkedInButton {
-    top: 4vw;
-    right: 4vw;
-    width: 12vw;
-    height: 12vw;
-  }
-
-  .profileImage {
-    height: 100%;
-  }
-
-  .profileContent a {
-    font-size: calc(0.1rem + 4vw)
-  }
-
-  .profileContent div {
-    font-size: calc(0.25rem + 2.4vw);
-  }
-
-  .galleryHeader div {
-    text-align: center;
-    font-size: calc(10px + 1.75vw);
-  }
-=======
->>>>>>> main
 }
