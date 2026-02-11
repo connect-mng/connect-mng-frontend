@@ -3,6 +3,7 @@ import erik from "../../images/Interns/erik.webp";
 import tuya from "../../images/Interns/tuya.jpg";
 import niko from "../../images/Interns/niko.jpg";
 import tem from "../../images/Interns/tem.jpg";
+import jason from "../../images/Interns/jason.webp";
 
 
 import React from "react";
@@ -77,11 +78,11 @@ export default function BoardMemberGallery() {
           linkedIn: "https://www.linkedin.com/in/nyambileg-ganbaatar-053482183/"
         }} />
         <Profile person={{
-          name: "Jason",
-          imageId: person,
+          name: "Jason Yeung",
+          imageId: jason,
           position: "Web Developer",
           description: "",
-          linkedIn: "https://www.linkedin.com/in/jkedwards8/"
+          linkedIn: "https://www.linkedin.com/in/jason-yeung-uta"
         }} />
         <Profile person={{
           name: "Temuulen",
