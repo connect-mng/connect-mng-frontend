@@ -3,17 +3,33 @@
     flex-direction: column;
     position: absolute;
     cursor: pointer;
-    font-size: calc(0.2rem + 1vw);
-    background: #fbfbfb;
-    width: 100%;
+    font-size: 16px;
+    background: #ffffff;
+    min-width: 200px;
+    width: max-content;
     top: 100%;
-    border-top: 0.2vw solid #043c26;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+    padding: 10px 0;
     z-index: 900;
 }
 
 .subDropdownOption {
-    color: black;
+    color: #2f3b4a;
     text-decoration: none;
-    text-align: center;
-    border-top: 0.05vw solid #d4d4d4;
+    text-align: left;
+    padding: 12px 22px;
+    font-weight: 500;
+    border-top: 1px solid transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.subDropdownOption:first-child {
+    border-top: none;
+}
+
+.subDropdownOption:hover {
+    background-color: #f6f8fa;
+    color: #8fb37e;
 }

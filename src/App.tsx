@@ -9,7 +9,7 @@ import ResumeHelp from "./pages/Events/EventsPages/ResumeHelp/Resumehelp.jsx";
 import HappyHour from "./pages/Events/EventsPages/HappyHour/HappyHour.jsx"
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
-import Home from "./pages/Home/Home.jsx";
+import Home from "./pages/Home/Home";
 import Internships from "./pages/Internships/Internships.jsx";
 import MentorshipProgram from "./pages/Programs/ProgramPages/Mentorship/Mentorship.jsx";
 import Navigation from "./components/Navigation/Navigation.jsx";
@@ -20,25 +20,27 @@ import Resources from "./pages/Resources/Resources.jsx";
 import ResumeBlog from "./pages/Blogs/IndividualBlogs/ResumeBlog/ResumeBlog.jsx";
 import ResumeBoostProgram from "./pages/Programs/ProgramPages/ResumeBoost/ResumeBoost.jsx";
 import SupportPopup from "./components/SupportPopup/SupportPopup.jsx";
-import translations from "./common/translations.jsx";
+import translations from "./common/translations";
 import Volunteer from "./pages/Volunteer/Volunteer.jsx";
 import NewFeature from "./pages/NewFeatures/NewFeatures.jsx";
+import ResumeBuilding from "./pages/Events/EventsPages/ResumeBuilding/ResumeBuilding.jsx";
+import Workshops from "./pages/Blogs/Workshops";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { IntlProvider } from "react-intl";
 import { useState } from "react";
 
 import "./App.css";
-import Workshops from "./pages/Blogs/Workshops.jsx";
-import ResumeBuilding from "./pages/Events/EventsPages/ResumeBuilding/ResumeBuilding.jsx";
-
 
 export default function App() {
-	const [isEnglish, setIsEnglish] = useState(true);
+	const [isEnglish, setIsEnglish] = useState<boolean>(true);
 
 	return (
 		<div className={"app"}>
-			<IntlProvider locale={isEnglish ? "en" : "mn"} messages={translations[isEnglish ? "en" : "mn"]}>
+			<IntlProvider
+				locale={isEnglish ? "en" : "mn"}
+				messages={translations[isEnglish ? "en" : "mn"]}
+			>
 				<Router>
 					<div className={"pinnedHeader"}>
 						<Header isEnglish={isEnglish} setIsEnglish={setIsEnglish} />
@@ -47,36 +49,59 @@ export default function App() {
 					<div className={"pageContainer"}>
 						<Routes>
 							<Route path="/programs" element={<Programs />} />
-							<Route path="/programs/cultural-compass-program" element={<CulturalCompassProgram />} />
-							<Route path="/programs/mentorship-program" element={<MentorshipProgram />} />
-							<Route path="/programs/resume-boost-program" element={<ResumeBoostProgram />} />
+							<Route
+								path="/programs/cultural-compass-program"
+								element={<CulturalCompassProgram />}
+							/>
+							<Route
+								path="/programs/mentorship-program"
+								element={<MentorshipProgram />}
+							/>
+							<Route
+								path="/programs/resume-boost-program"
+								element={<ResumeBoostProgram />}
+							/>
 							<Route path="/get-involved/volunteer" element={<Volunteer />} />
 							<Route path="/get-involved/internships" element={<Internships />} />
 							<Route path="/resources/podcasts" element={<Podcasts />} />
 							<Route path="/events" element={<Events />} />
 							<Route path="/events/resume-help" element={<ResumeHelp />} />
 							<Route path="/events/happy-hour" element={<HappyHour />} />
-							<Route path="/events/resume-building" element={<ResumeBuilding />} />
+							<Route
+								path="/events/resume-building"
+								element={<ResumeBuilding />}
+							/>
 							<Route path="/resources/blogs" element={<Blogs />} />
-							<Route path="/resources/blogs/resume-blog" element={<ResumeBlog />} />
+							<Route
+								path="/resources/blogs/resume-blog"
+								element={<ResumeBlog />}
+							/>
+							<Route
+								path="/resources/blogs/welcome-blog"
+								element={<Workshops />}
+							/>
+
 							<Route path="/about-us/our-team" element={<OurTeam />} />
 							<Route path="/about-us/our-story" element={<OurStory />} />
+
 							<Route path="/resources" element={<Resources />} />
 							<Route path="/contact-us" element={<Contact />} />
 							<Route path="/get-involved/donate" element={<Donate />} />
-							<Route path="/resources/blogs" element={<Blogs />} />
-							<Route path="/resources/blogs/welcome-blog" element={<Workshops />} />
-							<Route path="*" element={<Home />} />
+
 							<Route path="/new-feature" element={<NewFeature />} />
 
+							{/* Default / Home */}
+							<Route path="*" element={<Home />} />
 						</Routes>
 					</div>
+
 					<div className={"pinnedSupportPopup"}>
 						<SupportPopup />
 					</div>
+
 					<Footer />
 				</Router>
 			</IntlProvider>
 		</div>
 	);
-};
+}

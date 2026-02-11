@@ -106,6 +106,7 @@
 
 .galleryContainer {
   width: 100%
+<<<<<<< HEAD
 }
 
 /* Adjustments for smaller screens */
@@ -139,4 +140,6 @@
     text-align: center;
     font-size: calc(10px + 1.75vw);
   }
+=======
+>>>>>>> main
 }

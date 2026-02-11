@@ -1,0 +1,144 @@
+.footer {
+    background: #0b0b0b;
+    color: #ffffff;
+    padding: 54px 0 40px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 374px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    width: 100%;
+    margin: 0;
+    padding: 0 48px;
+    margin-bottom: 36px;
+}
+
+.footer-branding {
+    flex: 0 0 620px;
+    max-width: 620px;
+}
+
+.footer-logo {
+    width: 240px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.footer-mission {
+    font-size: 22px;
+    line-height: 1.65;
+    color: #bfc1c4;
+    margin-bottom: 30px;
+    max-width: 640px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social-button {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #1f1f1f;
+    border: 1px solid #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+}
+
+.footer-social-button:hover {
+    transform: translateY(-3px);
+    background-color: #262626;
+    border-color: #3a3a3a;
+}
+
+.footer-social-button img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: grayscale(1) brightness(2) contrast(1.1);
+}
+
+.footer-links {
+    flex: 0 0 220px;
+}
+
+.footer-heading {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 22px;
+    color: #ffffff;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-link {
+    color: #bfc1c4;
+    text-decoration: none;
+    font-size: 22px;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+.footer-link-mobile {
+    display: none;
+}
+
+.footer-contact {
+    flex: 0 0 220px;
+    margin-right: 120px;
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-email {
+    color: #bfc1c4;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.footer-email:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    width: 100%;
+    margin: 0;
+    padding: 0 48px;
+}
+
+.footer-divider {
+    height: 1px;
+    background: #2c2c2c;
+    opacity: 0.6;
+    margin-bottom: 26px;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 18px;
+    color: #9a9ca0;
+    margin: 0;
+}

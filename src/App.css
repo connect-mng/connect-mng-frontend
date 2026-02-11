@@ -18,9 +18,12 @@ html {
 
 @media screen and (max-width: 768px) {
     .pageContainer {
-        padding-top: calc(1rem + 20vw);
+        padding-top: 0;
     }
 
+    .pinnedHeader {
+        position: static !important;
+    }
 }
 
 .pinnedHeader {
