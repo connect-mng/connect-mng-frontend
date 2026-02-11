@@ -40,10 +40,6 @@ export default function Internships() {
 				<p>{intl.formatMessage({ id: "internshipsStep2" })}</p>
 				<p>{intl.formatMessage({ id: "internshipsStep3" })}</p>
 			</div>
-
-			
-
-
 			<div className="thinSeparator only-mobile"></div>
 
 			<div className={'volunteerCardContainer only-desktop'}>

@@ -1,11 +1,6 @@
-export interface TimelineItemRaw {
-  year: string;
-  titleId: string;
-  descriptionId: string;
-  position: "left" | "right";
-}
+import { TimelineItem } from "./Timeline";
 
-export const timelineData: TimelineItemRaw[] = [
+export const timelineItems: TimelineItem[] = [
   {
     year: "2023",
     titleId: "timeline2023title",

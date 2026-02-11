@@ -8,12 +8,12 @@ export interface TimelineCardProps {
   position: "left" | "right";
 }
 
-const TimelineCard: React.FC<TimelineCardProps> = ({
+export default function TimelineCard({
   year,
   title,
   description,
   position,
-}) => {
+}: TimelineCardProps) {
   return (
     <div className={`timeline-card ${position}`}>
       <span className="timeline-year">{year}</span>
@@ -21,6 +21,4 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
       <p className="timeline-description">{description}</p>
     </div>
   );
-};
-
-export default TimelineCard;
+}
