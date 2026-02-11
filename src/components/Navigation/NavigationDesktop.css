@@ -7,19 +7,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 26px 0;
+    height: 112px;
     width: 100%;
-    max-width: 100%;
+    max-width: none;
     margin: 0;
+    padding: 0 32px;
+    box-sizing: border-box;
     background: #ffffff;
 }
 
 .nav-logo-link {
-    padding-left: 64px;
-}
-
-.nav-menu {
-    padding-right: 64px;
+    padding-left: 0;
 }
 
 .nav-logo-link {
@@ -29,35 +27,43 @@
 }
 
 .nav-logo {
-    height: 96px;
-    width: auto;
+    width: 132.92px;
+    height: 80px;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 52px;
+    justify-content: flex-end;
+    width: auto;
+    height: 24px;
+    gap: 36px;
 }
 
 .nav-item {
     position: relative;
     display: flex;
     align-items: center;
+    height: 24px;
 }
 
 .nav-link,
 .nav-button {
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.31px;
     font-weight: 500;
-    color: #3c4654;
+    color: #364153;
     text-decoration: none;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px 0;
+    padding: 0;
+    height: 24px;
     display: flex;
     align-items: center;
     gap: 4px;
+    white-space: nowrap;
     transition: color 0.2s ease;
 }
 
@@ -67,7 +73,7 @@
 }
 
 .nav-chevron {
-    font-size: 16px;
+    font-size: 18px;
     margin-left: 2px;
 }
 
@@ -76,10 +82,4 @@
     left: 50%;
     transform: translateX(-50%);
     margin-top: 8px;
-}
-
-@media (max-width: 768px) {
-    .nav-container {
-        display: none;
-    }
 }

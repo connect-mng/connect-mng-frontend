@@ -91,6 +91,12 @@
     justify-content: space-between;
 }
 
+.mobileNavText {
+    display: inline-flex;
+    align-items: center;
+    line-height: 24px;
+}
+
 /* .mobileNavLink:active {
     background-color: black;
 }  */
@@ -105,7 +111,12 @@
 
 .mobileNavChevron {
     font-size: 14px;
+    line-height: 1;
     color: #6b7280;
+    display: block;
+    flex-shrink: 0;
+    align-self: center;
+    transform: translateY(1px);
 }
 
 .mobileLogo {
