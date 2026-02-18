@@ -22,16 +22,6 @@
 }
 
 
-.aboutUsTitle h2 {
-    font-size: calc(16px + 2.5vw);
-    text-align: center;
-    margin-bottom: 1vw;
-    padding-top: 3vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
-}
-
-
 .aboutUsDesc p {
     display: flex;
     flex-direction: column;
@@ -102,6 +92,245 @@
 
 .aboutHeader {
     padding-bottom: 50px;
+}
+
+.about-Header {
+    padding-bottom: 100px;
+}
+
+.ourValues {
+    width: 100%;
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ourValues .valuesHeader {
+    font-size: calc(12px + 1vw);
+    text-align: center;
+    margin-bottom: 1vw;
+    padding-top: 3vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-weight: lighter;
+    color: rgb(4, 77, 111);
+}
+
+.ourValues .valuesSub {
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    line-height: 28px;
+    font-size: 16px;
+    max-width: 640px;
+    margin: 0 auto 12px;
+    color: rgb(99, 99, 99);
+}
+
+.ourValues .cardContainer {
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.ourValues .valueCard {
+    background: transparent;
+    border-radius: 24px;
+    padding: 24px 20px;
+    flex: 1 1 calc(25% - 24px);
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.ourValues .cardIcon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #61854b;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.ourValues .cardIcon svg {
+    width: 36px;
+    height: 36px;
+}
+
+.ourValues .valueCard h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c4322;
+    margin: 0;
+}
+
+.ourValues .valueCard p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgb(99, 99, 99);
+    margin: 0;
+}
+
+
+.joinOurTeam {
+    width: min(1100px, 100%);
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background: #ffffff;
+    border-radius: 56px;
+    border: 2px solid rgba(39, 67, 104, 0.35);
+    overflow: hidden;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.08);
+}
+
+.joinDetails {
+    background: #274368;
+    color: #ffffff;
+    padding: 40px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.joinIntro h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+}
+
+.joinIntro p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.joinBenefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.joinBenefits li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.benefitIcon {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: #61854b;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.benefitIcon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.joinActions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.joinButton {
+    min-width: 150px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.joinButton.primary {
+    background: #61854b;
+    color: #ffffff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.joinButton.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.joinButton:hover {
+    transform: translateY(-2px);
+}
+
+.joinImage {
+    min-height: 340px;
+    display: flex;
+    align-items: stretch;
+}
+
+.joinImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .ourValues .cardContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ourValues .valueCard {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .ourValues .valuesHeader {
+        padding-top: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ourValues .cardContainer {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 1080px) {
+    .joinOurTeam {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .joinDetails {
+        padding: 32px;
+    }
 }
 
 @media (min-width: 768px) {

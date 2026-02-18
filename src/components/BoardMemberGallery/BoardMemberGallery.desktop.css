@@ -9,6 +9,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 75vw;
+  margin: 0 auto;
 }
 
 .profile {
@@ -89,19 +90,42 @@
 
 .galleryHeader {
   padding-bottom: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.galleryHeader h1 {
+.galleryContainer .galleryHeader h1 {
   font-family: Inter;
-  font-weight: 700;
+  font-weight: 200;
   font-size: 20px;
   line-height: 30px;
   letter-spacing: 0%;
-  padding-bottom: 20px;
+  color: #607b4b;
+  background-color: #eff3ec;
+  padding: 10px 24px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .galleryHeader div {
   font-size: 16px;
+}
+
+.galleryContainer {
+  background-color: #f9fafb;
+}
+
+.galleryHeader .boardMemberText {
+  font-size: 15px;
+  color: #7a7a7a;
+  text-align: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .galleryContainer {
