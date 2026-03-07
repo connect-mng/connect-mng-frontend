@@ -4,6 +4,8 @@ import React from "react";
 import { useIntl } from "react-intl";
 
 import "./Podcasts.css";
+import PodcastsCard from "../../components/PageCard/PodcastsCard/PodcastsCard";
+import PodcastsImg from "../../images/PageCards/Podcasts.jpg"
 
 function PodcastCard({ image, title, desc, link }) {
 	const intl = useIntl();
@@ -25,6 +27,16 @@ export default function Blogs() {
 
 	return (
 		<div className={"podcastContainer"}>
+			<div className="PageHeader">
+			<PodcastsCard
+				pillText={intl.formatMessage({ id: "Podcast" })} 
+				title="Behind The Badge"
+				body="Behind The Badge is Connect MNG's signature podcast series featuring candid conversations with Mongolian American students and young professionals. Each episode takes you behind the scenes to explore the personal stories, career journeys, and cultural experiences that shape our community. Tune in for authentic discussions about identity, ambition, and what it means to forge your own path."
+				coverImageSrc={PodcastsImg}
+				coverImageAlt="Behind The Badge cover"
+			/>
+			</div>
+
 			<h1>{intl.formatMessage({id: "podcasts"})}</h1>
 			<PodcastCard image={''}
 				title={"Connect MNG - Where Your Journey is Our Journey"}

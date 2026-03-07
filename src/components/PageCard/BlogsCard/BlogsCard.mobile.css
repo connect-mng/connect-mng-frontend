@@ -1,0 +1,14 @@
+@media (max-width: 768px){
+  .blogsHeroCard {
+      min-height: 440px;
+      border-radius: 0;
+    }
+
+    .blogsHeroCard__left {
+      max-width: 100%;
+    }
+
+    .blogsHeroCard__body {
+      max-width: 100%;
+    }
+  }
