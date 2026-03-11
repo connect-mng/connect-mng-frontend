@@ -182,6 +182,16 @@ const translations = {
         resume_building_desc3: "🎯Ideal for job seekers and students looking to refine their resumes.",
         rb_back_to_events: "⬅ Back to Events",
 
+        // Timeline translations
+
+        timeline2023title: "The Idea",
+        timeline2023desc: "A group of Mongolian American graduates recognized the need for a supportive community network.",
+        timeline2024title: "First Steps",
+        timeline2024desc: "Launched our first Resume Boost Program with 25 participants and informal resume workshops.",
+        timeline2025title: "Growth & Programs",
+        timeline2025desc: "Expanded to multiple career-focused programs, delivered 3 professional development workshops, and hosted our first in-person networking event with 50+ attendees.",
+        timeline2026title: "Thriving Community",
+        timeline2026desc: "Hosting quarterly workshops, publishing Behind The Badge Podcast episodes and interview articles, and sharing career insights through our blog.",
     },
     mn: {
         programs: "Хөтөлбөрүүд",
@@ -315,6 +325,16 @@ const translations = {
         resume_desc2: "📝 Шилдэг туршлага, форматлах зөвлөмж, ур чадвараа хэрхэн үр дүнтэй онцлох талаар суралц.",
         resume_desc3: "🎯 Ажил хайгч болон анкетаа сайжруулах хүсэлтэй оюутнуудад тохиромжтой.",
         r_back_to_events: "⬅ Үйл явдал руу буцах",
+
+        // Timeline translations
+        timeline2023title: "Санаа",
+        timeline2023desc: "Монгол Америкийн төгсөгчдийн бүлэг дэмжлэгийн сүлжээний хэрэгцээг мэдэрсэн.",
+        timeline2024title: "Эхний Алхам",
+        timeline2024desc: "25 оролцогчтойгоор анхны Resume Boost хөтөлбөрийг эхлүүлсэн.",
+        timeline2025title: "Өсөлт & Хөтөлбөрүүд",
+        timeline2025desc: "Олон карьер чиглэлтэй хөтөлбөр хэрэгжүүлж, 50+ оролцогчтой анхны биечилсэн нетворкинг арга хэмжээг зохион байгуулсан.",
+        timeline2026title: "Хөгжингүй Нийгэмлэг",
+        timeline2026desc: "Улирал тутмын семинар зохион байгуулж, подкаст нийтлэж, карьерын мэдлэгийг хуваалцаж байна.",
     },
 };
 
