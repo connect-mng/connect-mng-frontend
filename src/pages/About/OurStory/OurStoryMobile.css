@@ -13,12 +13,10 @@
     position: absolute;
     inset: 0;
     background: rgba(30, 58, 95, 0.75);
-    z-index: 0;
   }
 
   .ourStoryTitleContainer > * {
     position: relative;
-    z-index: 1;
   }
 
   .ourStoryTitleContainer h1 {
@@ -171,8 +169,8 @@
 
   .timelineTitle {
     font-size: 1rem;
-    color: #1E3A5F;
-    font-weight: 400;
+    color: #1F2937;
+    font-weight: 600;
     margin: 0 0 0.5rem;
   }
 
@@ -180,7 +178,6 @@
     font-size: 0.9rem;
     color: #6B7280;
     line-height: 1.6;
-    margin: 0;
   }
 
   .chapter2Container {
@@ -190,7 +187,7 @@
 
   .chapter2Grid {
     display: flex;
-    flex-direction: column !important;
+    flex-direction: column ;
     gap: 1.5rem;
   }
 
