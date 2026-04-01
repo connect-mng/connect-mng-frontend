@@ -1,7 +1,6 @@
 import React from "react";
 import "./DonationBadge.css"
 
-
 type CircleProps = {
     textVal : string;
     color : string;

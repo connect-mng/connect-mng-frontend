@@ -1,13 +1,17 @@
 import React from "react";
 import "./ImpactDetails.css";
 import { DetailBox } from "./ImpactDetailBox";
-import { impactItems } from "./ImpactDetailsConstant"
+import { impactItems } from "./ImpactDetailsConstant";
 
 export function ImpactDetail() {
   const itemList = impactItems.map((impactItem) => (
     // Wrap each impactItem in div and show all Details.
     <div key={impactItem.id}>
-      <DetailBox heading={impactItem.title} content={impactItem.description} backgroundcolor=""/>
+      <DetailBox
+        heading={impactItem.title}
+        content={impactItem.description}
+        backgroundcolor=""
+      />
     </div>
   ));
 

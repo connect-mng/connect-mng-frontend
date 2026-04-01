@@ -1,0 +1,82 @@
+.donationTier {
+  
+  width: 222.5px;
+  height: 498px;
+  border-radius: 12px;
+  border: 2px solid #EAEDF0;
+  padding: 34px 34px 45px 34px;
+
+  display: flex;            
+  flex-direction: column;     
+
+  gap: 14px;
+  text-align: center;
+  color: white;
+}
+  
+  /* highlighted (most popular) */
+.donationTier.highlight {
+  border: 2px solid #7aa35a;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+  
+.donationTierPrice {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1E3F66;
+}
+
+.donationTierTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #7aa35a;
+}
+
+.donationTierDescription {
+  height: 40px;
+  width: 158px;
+  place-self: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #5f7c99;
+}
+    
+.donationTierlu {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+    
+.donationTierli {
+  display: flex;             
+  align-items: flex-start; 
+  font-size: 14px;
+  font-weight: 400;
+  gap: 8px;
+  text-align: left;
+  color: #354E6D;
+}
+    
+/* donate button */
+.donationTierButton {
+  height: 60px;
+  width: 100%;
+  margin-top: auto;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 2px solid #7aa35a;
+  cursor: pointer;
+  background: white;
+  color: #7aa35a;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+    
+.donationTierButton:hover {
+  background: #7aa35a;
+  color: white;
+}

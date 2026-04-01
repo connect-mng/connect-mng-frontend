@@ -1,0 +1,16 @@
+.infoSection{
+  background-color: white;
+  padding: 24px;
+}
+
+.infoTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.infoDescription {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+}

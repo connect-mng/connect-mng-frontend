@@ -3,7 +3,7 @@ import OurStory from "./pages/About/OurStory/OurStory.jsx";
 import Blogs from "./pages/Blogs/Blogs.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import CulturalCompassProgram from "./pages/Programs/ProgramPages/CulturalCompass/CulturalCompass.jsx";
-import Donate from "./pages/Donate/Donate.jsx";
+import Donate from './pages/Donate/Donate'
 import Events from "./pages/Events/Events.jsx";
 import ResumeHelp from "./pages/Events/EventsPages/ResumeHelp/Resumehelp.jsx";
 import HappyHour from "./pages/Events/EventsPages/HappyHour/HappyHour.jsx"
@@ -15,7 +15,6 @@ import MentorshipProgram from "./pages/Programs/ProgramPages/Mentorship/Mentorsh
 import Navigation from "./components/Navigation/Navigation.jsx";
 import Podcasts from "./pages/Podcasts/Podcasts.jsx";
 import Programs from "./pages/Programs/Programs.jsx";
-import React from "react";
 import Resources from "./pages/Resources/Resources.jsx";
 import ResumeBlog from "./pages/Blogs/IndividualBlogs/ResumeBlog/ResumeBlog.jsx";
 import ResumeBoostProgram from "./pages/Programs/ProgramPages/ResumeBoost/ResumeBoost.jsx";
@@ -23,7 +22,6 @@ import SupportPopup from "./components/SupportPopup/SupportPopup.jsx";
 import translations from "./common/translations";
 import Volunteer from "./pages/Volunteer/Volunteer.jsx";
 import NewFeature from "./pages/NewFeatures/NewFeatures.jsx";
-import ResumeBuilding from "./pages/Events/EventsPages/ResumeBuilding/ResumeBuilding.jsx";
 import Workshops from "./pages/Blogs/Workshops";
 import ResumeBuilding from "./pages/Events/EventsPages/ResumeBuilding/ResumeBuilding";
 
