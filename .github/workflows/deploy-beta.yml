@@ -35,6 +35,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          CI: false
 
       - name: Bump version & create git tag
         id: version
