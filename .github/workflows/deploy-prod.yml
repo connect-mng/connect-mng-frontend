@@ -1,0 +1,57 @@
+name: Deploy to Production
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release tag to deploy (e.g. v0.1.1)"
+        required: true
+        type: string
+
+# Prevent concurrent prod deployments
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: false # queue instead of cancel for prod safety
+
+jobs:
+  deploy:
+    name: Deploy ${{ github.event.inputs.release_tag }} to Production
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.release_tag }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+
+      - name: Deploy to Production S3
+        run: |
+          aws s3 sync build/ s3://${{ secrets.PROD_S3_BUCKET }} \
+            --delete \
+            --cache-control "no-cache, no-store, must-revalidate"
+
+      - name: Summary
+        run: |
+          echo "### 🚀 Production Deployment Complete" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** ${{ github.event.inputs.release_tag }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Bucket:** s3://${{ secrets.PROD_S3_BUCKET }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Triggered by:** ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
