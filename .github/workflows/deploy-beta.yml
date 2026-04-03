@@ -41,6 +41,7 @@ jobs:
       - name: Bump version & create git tag
         id: version
         run: |
+          git stash
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           npm version patch -m "chore: release %s [skip ci]"
