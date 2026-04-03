@@ -1,4 +1,5 @@
 import BoardMemberGallery from "../../../components/BoardMemberGallery/BoardMemberGallery.jsx";
+import InternGallery from "../../../components/InternGallery/InternGallery.jsx";
 import React from "react";
 
 import { useIntl } from "react-intl";
@@ -25,6 +26,7 @@ export default function OurTeam() {
         <div>{intl.formatMessage({ id: "ourValuesDesc" })}</div>
       </div>
       <BoardMemberGallery />
+      <InternGallery />
     </div>
   );
 };
