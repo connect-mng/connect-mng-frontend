@@ -60,6 +60,7 @@ export default function BoardMemberGallery() {
     <div className={"galleryContainer"}>
       <div className={"galleryHeader"}>
         <h1>{intl.formatMessage({ id: "meetInterns" })}</h1>
+        <div className="boardMemberText">Meet our Interns who contribute to Connect MNG through their hard work and enthusiasm</div>
       </div>
       <div className={"profileContainer"}>
         <Profile person={{
