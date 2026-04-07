@@ -6,8 +6,8 @@ import fb2 from "../../images/socials/fb2.png";
 import insta2 from "../../images/socials/insta2.png";
 import linkedin2 from "../../images/socials/linkedin2.png";
 
-import "./FooterDesktop.css";
-import "./FooterMobile.css";
+import "./Footer.desktop.css";
+import "./Footer.mobile.css";
 
 export default function Footer() {
     const intl = useIntl();
@@ -52,7 +52,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-column footer-links">
-                    <h3 className="footer-heading">Quick Links</h3>
+                    <h3 className="footer-heading">{intl.formatMessage({ id: "quickLinks" })}</h3>
                     <nav className="footer-nav">
                         <Link to="/about-us/our-story" className="footer-link footer-link-desktop">
                             About Us
