@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 import { useIntl } from "react-intl";
 import { useState, useEffect } from "react";
 
-import "./NavigationDesktop.css";
-import "./NavigationMobile.css";
-import Mobile from "../Mobile/Mobile.jsx";
+import "./Navigation.desktop.css";
+import "./Navigation.mobile.css";
+import Mobile from "../MobileDropdown/Mobile.jsx";
 
 export default function Navigation() {
 	const intl = useIntl();
