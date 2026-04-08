@@ -2,15 +2,24 @@ import React from "react";
 import { ImpactSection } from "../../components/Donation/ImpactSection";
 import { ImpactDetail } from "../../components/Donation/ImpactDetails";
 import { DonationBadge } from "../../components/Donation/DonationBadge";
-import "./Donate.css";
 import { DonationTierBox } from "../../components/DonateCard/DonationTierBox";
 import { ProgramBox } from "../../components/DonateCard/ProgramBox";
+import { ImpactLongBox } from "../../components/Donation/ImpactLongBox";
+import { StoryBox } from "../../components/Donation/StoryBox";
 import imageHat from "../../images/Donate/Hat.png";
 import imagePeople from "../../images/Donate/People.png";
 import imageCircle from "../../images/Donate/Circle.png";
+import grow from "../../images/Donate/Grow.png";
+import reward from "../../images/Donate/Reward.png";
+import imageStar from "../../images/Donate/Star.png";
+import imageDollar from "../../images/Donate/Dollar.png";
+import imagePerson from "../../images/Donate/Person.png";
+import imageHeart from "../../images/Donate/Heart.png"
+
+import "./Donate.css";
 export default function Donate() {
   return (
-    <div className="donateSection">
+    <div className="donatePage">
       <section className="donateImpact">
         <div>
           <DonationBadge textVal="Our Impact" color="" />
@@ -91,11 +100,27 @@ export default function Donate() {
           />
         </div>
       </section>
-      <section className="donateSection">
+      <section className="donateReal">
         <DonationBadge textVal="Real Story, Real Impact" color="" />
         <ImpactSection
           title="Your Donation Changes Lives"
           description="When you donate to Connect MNG, you're not just supporting programs—you're investing in individual students and professionals who will become tomorrow's leaders in their communities."
+          align="left"
+        />
+        <ImpactLongBox
+          title="Career Growth"
+          description="85% of Resume Boost participants reported landing interviews within 3 months of completing the program."
+          icons={grow}
+        />
+        <ImpactLongBox
+          title="Community Building"
+          description="Over 1,200 connections made through our networking events and mentorship programs."
+          icons={imagePeople}
+        />
+        <ImpactLongBox
+          title="Free Access"
+          description="95% of our programs remain completely free to members thanks to donor support."
+          icons={reward}
         />
       </section>
       <section className="donateSection">
@@ -103,6 +128,20 @@ export default function Donate() {
           title="What Our Community Says"
           description="Hear from members and supporters about the impact of Connect MNG."
         />
+        <div className="donateStory">
+          <StoryBox
+            quote="Connect MNG gave me the tools and network I needed to land my dream job. Supporting this organization means investing in the next generation of Mongolian American leaders."
+            name="Sarah Chen"
+            role="Software Engineer, Former Member"
+            image={imageHeart}
+          />
+          <StoryBox
+            quote="As a donor, I've seen firsthand how my contributions directly impact students. Every dollar goes toward meaningful programs that make a real difference."
+            name="Michael Bataar"
+            role="Community Supporter"
+            image={imageHeart}
+          />
+        </div>
       </section>
       <section className="donateSection">
         <ImpactSection
@@ -111,19 +150,25 @@ export default function Donate() {
         />
         <div className="programGrid">
           <ProgramBox
-            imageSrc={imageHat}
+            imageSrc={imagePerson}
             title="Volunteer"
             description="Share your expertise as a mentor or event organizer."
+            align="center"
+            buttonLabel="Learn More"
           />
           <ProgramBox
-            imageSrc={imagePeople}
+            imageSrc={imageStar}
             title="Spread the Word"
             description="Share our mission with friends and on social media."
+            align="center"
+            buttonLabel="Share Now"
           />
           <ProgramBox
-            imageSrc={imageCircle}
+            imageSrc={imageDollar}
             title="Corporate Matching"
             description="Many employers will match your donation—check if yours does!"
+            align="center"
+            buttonLabel="Find Out How"
           />
         </div>
       </section>
