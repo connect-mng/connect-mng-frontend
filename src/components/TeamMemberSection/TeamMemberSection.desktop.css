@@ -1,0 +1,135 @@
+.team-member-section {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+
+.team-member-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.team-member-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 40px;
+    border-radius: 999px;
+    background: #edf3e6;
+    color: #6f8d51;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.team-member-title {
+    margin: 0;
+    color: #3a4960;
+    font-size: 52px;
+    line-height: 1.15;
+    font-weight: 500;
+}
+
+.team-member-description {
+    max-width: 980px;
+    margin: 0;
+    color: #5c6980;
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.team-member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 36px;
+}
+
+.team-member-card {
+    min-width: 0;
+}
+
+.team-member-media {
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    border-radius: 28px;
+    background: #d7ddd0;
+    box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
+}
+
+.team-member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-member-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #7f9960 0%, #475b37 100%);
+}
+
+.team-member-placeholder span {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 88px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.team-member-link {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 2;
+    width: 54px;
+    height: 54px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #6f8d51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.team-member-link-disabled {
+    cursor: default;
+}
+
+.team-member-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 28px;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.08) 20%, rgba(15, 23, 42, 0.72) 100%);
+}
+
+.team-member-name {
+    margin: 0;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.team-member-role {
+    margin: 0;
+    color: #9fbd6d;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+}
