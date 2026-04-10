@@ -1,20 +1,13 @@
 import React from "react";
 import { ImpactSection } from "../../components/Donation/ImpactSection";
-import { ImpactDetail } from "../../components/Donation/ImpactDetails";
+import { DetailBox } from "../../components/Donation/ImpactDetailBox";
+import { impactItems } from "../../components/Donation/ImpactDetailsConstant";
 import { DonationBadge } from "../../components/Donation/DonationBadge";
 import { DonationTierBox } from "../../components/DonateCard/DonationTierBox";
 import { ProgramBox } from "../../components/DonateCard/ProgramBox";
 import { ImpactLongBox } from "../../components/Donation/ImpactLongBox";
 import { StoryBox } from "../../components/Donation/StoryBox";
-import imageHat from "../../images/Donate/Hat.png";
-import imagePeople from "../../images/Donate/People.png";
-import imageCircle from "../../images/Donate/Circle.png";
-import grow from "../../images/Donate/Grow.png";
-import reward from "../../images/Donate/Reward.png";
-import imageStar from "../../images/Donate/Star.png";
-import imageDollar from "../../images/Donate/Dollar.png";
-import imagePerson from "../../images/Donate/Person.png";
-import imageHeart from "../../images/Donate/Heart.png"
+import { donateImages } from "../../images/donateImages";
 
 import "./Donate.css";
 export default function Donate() {
@@ -28,7 +21,16 @@ export default function Donate() {
             description="Thanks to our generous donors, we've been able to provide life-changing opportunities to hundreds of students."
           />
         </div>
-        <ImpactDetail />
+        <div className="impactGrid">
+          {impactItems.map((item) => (
+            <DetailBox
+              key={item.id}
+              heading={item.title}
+              content={item.description}
+              backgroundcolor=""
+            />
+          ))}
+        </div>{" "}
       </section>
       <section className="donateSection">
         <ImpactSection
@@ -37,17 +39,17 @@ export default function Donate() {
         />
         <div className="programGrid">
           <ProgramBox
-            imageSrc={imageHat}
+            imageSrc={donateImages.hat}
             title="Professional Development"
             description="Fund workshops, mentorship programs, and career development resources for Mongolian American students. "
           />
           <ProgramBox
-            imageSrc={imagePeople}
+            imageSrc={donateImages.people}
             title="Community Events"
             description="Support networking events, social gatherings, and cultural celebrations that bring our community together."
           />
           <ProgramBox
-            imageSrc={imageCircle}
+            imageSrc={donateImages.circle}
             title="Program Expansion"
             description="Help us reach more students across the country and develop new initiatives tailored to community needs."
           />
@@ -110,17 +112,17 @@ export default function Donate() {
         <ImpactLongBox
           title="Career Growth"
           description="85% of Resume Boost participants reported landing interviews within 3 months of completing the program."
-          icons={grow}
+          icons={donateImages.grow}
         />
         <ImpactLongBox
           title="Community Building"
           description="Over 1,200 connections made through our networking events and mentorship programs."
-          icons={imagePeople}
+          icons={donateImages.people}
         />
         <ImpactLongBox
           title="Free Access"
           description="95% of our programs remain completely free to members thanks to donor support."
-          icons={reward}
+          icons={donateImages.reward}
         />
       </section>
       <section className="donateSection">
@@ -133,13 +135,13 @@ export default function Donate() {
             quote="Connect MNG gave me the tools and network I needed to land my dream job. Supporting this organization means investing in the next generation of Mongolian American leaders."
             name="Sarah Chen"
             role="Software Engineer, Former Member"
-            image={imageHeart}
+            image={donateImages.heart}
           />
           <StoryBox
             quote="As a donor, I've seen firsthand how my contributions directly impact students. Every dollar goes toward meaningful programs that make a real difference."
             name="Michael Bataar"
             role="Community Supporter"
-            image={imageHeart}
+            image={donateImages.heart}
           />
         </div>
       </section>
@@ -150,21 +152,21 @@ export default function Donate() {
         />
         <div className="programGrid">
           <ProgramBox
-            imageSrc={imagePerson}
+            imageSrc={donateImages.person}
             title="Volunteer"
             description="Share your expertise as a mentor or event organizer."
             align="center"
             buttonLabel="Learn More"
           />
           <ProgramBox
-            imageSrc={imageStar}
+            imageSrc={donateImages.star}
             title="Spread the Word"
             description="Share our mission with friends and on social media."
             align="center"
             buttonLabel="Share Now"
           />
           <ProgramBox
-            imageSrc={imageDollar}
+            imageSrc={donateImages.dollar}
             title="Corporate Matching"
             description="Many employers will match your donation—check if yours does!"
             align="center"

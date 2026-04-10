@@ -58,18 +58,39 @@
 
 .programGrid {
   display: grid;
-  grid-template-columns: repeat(3, 325px);
-  gap: 36px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   margin-top: 50px;
   justify-content: center; /* centers the whole row */
 }
 
 .donateTierGrid {
   display: grid;
-  grid-template-columns: repeat(4, 275.5px);
-  gap: 36px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
   margin-top: 50px;
   justify-content: center; /* centers the whole row */
+}
+
+/* ImpactDetail grid */
+.donateImpact .container {
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 100%;
+  width: 100%;
+}
+
+/* StoryBox grid */
+.donateStory {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.impactGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  width: 100%;
+  max-width: 958px;
+  margin: 0 auto;
 }
 
 .moneyButtonContainer {
@@ -107,7 +128,7 @@
   font-size: 1.75vw;
 }
 
-.donateButton:hover {
+.donateButton:hover { 
   background: orange;
 }
 
@@ -123,6 +144,49 @@
   margin-top: 20px;
   width: 50%;
   max-width: 100%;
+}
+
+
+@media (max-width: 900px) {
+  .programGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .donateTierGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .donateImpact .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .programGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .donateTierGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .donateImpact .container {
+    grid-template-columns: repeat(2, 1fr);  /* keep 2 on mobile, impact boxes are small */
+  }
+
+  .donateStory {
+    grid-template-columns: 1fr;
+  }
+
+  .impactGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .impactGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 750px) {
