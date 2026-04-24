@@ -1,3 +1,4 @@
+import Timeline from "../../../components/Timeline/Timeline";
 import React from "react";
 import "./OurStory.css";
 import "./OurStoryDesktop.css";
@@ -12,33 +13,6 @@ import chapterTwoGroup from '../../../images/OurStory/chapter-two-group.png';
 import circleVec from '../../../images/OurStory/circle-vector.svg';
 
 export default function OurStory() {
-  const timelineData = [
-    {
-      year: "2023",
-      title: "The Idea",
-      description:
-        "A group of Mongolian American graduates recognized the need for a supportive community network.",
-    },
-    {
-      year: "2024",
-      title: "First Steps",
-      description:
-        "Launched our first Resume Boost Program with 25 participants and informal resume workshops.",
-    },
-    {
-      year: "2025",
-      title: "Growth & Programs",
-      description:
-        "Expanded to multiple career-focused programs, delivered 3 professional development workshops, and hosted our first in-person networking event with 50+ attendees.",
-    },
-    {
-      year: "2026",
-      title: "Thriving Community",
-      description:
-        "Hosting quarterly workshops, publishing Behind The Badge Podcast episodes and interview articles, and sharing career insights through our blog.",
-    },
-  ];
-
   return (
     <div className="ourStoryPage">
       <section
@@ -108,25 +82,11 @@ export default function OurStory() {
           />
         </div>
       </section>
-      <section className="ourJourneyContainer">
-        <h2>Our Journey</h2>
-        <p>Every great community has a story. Here's how we've grown together over the years.</p>
-        <div className="timeline">
-          {timelineData.map((item, index) => (
-            <div
-              key={item.year}
-              className={`timelineItem ${index % 2 === 0 ? "left" : "right"}`}
-            >
-              <div className="timelineContent">
-                <h3 className="timelineYear">{item.year}</h3>
-                <h4 className="timelineTitle">{item.title}</h4>
-                <p className="timelineDescription">{item.description}</p>
-              </div>
-              <div className="timelineDot"></div>
-            </div>
-          ))}
-        </div>
-      </section>
+        <section className="ourJourneyContainer">
+          <h2>Our Journey</h2>
+          <p>Every great community has a story. Here's how we've grown together over the years.</p>
+          <Timeline />
+        </section>
 	  <section className="chapter2Container">
 		<div className="chapter2Grid">
 			<div className="chapter2Posters">
