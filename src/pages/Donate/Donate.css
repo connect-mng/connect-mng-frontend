@@ -32,6 +32,88 @@
 	color: #10885a;
 }
 
+/*.donateHeroCard {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    min-height: 560px;
+  }*/
+  
+  .donateHeroCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      #1E3A5F,
+      #2D5A7B
+    );
+    opacity: 0.72;
+    z-index: 0;
+  }
+  
+  .donateHeroCard > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .donateHeroPill {
+    margin-bottom: 18px;
+  }
+  
+  .donateHeroTitle {
+    display: block;
+  }
+  
+  .donateHeroButtons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .donateHeroCard {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+  
+	min-height: 600px;   
+	padding: 30px 40px;  
+  
+	align-items: stretch;
+	justify-content: center;
+  }
+  
+  .donateHeroCard .pageCardContent {
+	width: 100%;
+	max-width: none;
+	align-items: flex-start;
+	justify-content: center;
+	text-align: left;
+  }
+  
+  .donateHeroPill,
+  .donateHeroCard .pageCardTitle,
+  .donateHeroCard .pageCardDescription,
+  .donateHeroButtons {
+	align-self: flex-start;
+  }
+  
+  .donateHeroCard .pageCardTitle {
+	margin: 0 0 12px;
+  }
+  
+  .donateHeroCard .pageCardDescription {
+	margin: 0 0 20px;
+	max-width: 800px;
+  }
+  
+  .donateHeroButtons {
+	display: flex;
+	gap: 14px;
+	flex-wrap: wrap;
+	margin-top: 0;
+  }
 .moneyButtonContainer {
 	display: flex;
 	flex-wrap: wrap;

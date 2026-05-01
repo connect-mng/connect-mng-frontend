@@ -1,0 +1,105 @@
+.pageCard {
+    background: #ffffff;
+    padding: 28px 22px 30px;
+    width: 100%;
+    min-height: 500px;
+    text-align: left;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .pageCardIcon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #eef7ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    font-size: 30px;
+    color: #7bb36a;
+  }
+  
+  .pageCardTitle {
+    font: Inter;
+    color: white;
+    font-weight: 400;
+    letter-spacing: -0.31px;
+    margin: 40 0 30px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .pageCardDescription {
+    font: Inter;
+    font-weight: 400;
+    margin: 0 0 30px;
+    line-height: 24px;
+    font-size: 16px;
+    max-width: 70ch;
+    letter-spacing: -0.31px;
+    color: white;
+  }
+  
+  .pageCardButton {
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: left;
+  }
+
+  .pageCardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .pageCardMedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .pageCardActions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  
+  .pageCardButton--secondary {
+    border: 1.5px solid #7bb36a;
+    color: #7bb36a;
+    background: transparent;
+  }
+  
+  .pageCardButton--secondary:hover {
+    background-color: #7bb36a;
+    color: #ffffff;
+  }
+  
+  .pageCardButton--primary {
+    background: #7bb36a;
+    color: #ffffff;
+    border: 1.5px solid #7bb36a;
+  }
+  
+  .pageCardButton--primary:hover {
+    opacity: 0.92;
+  }

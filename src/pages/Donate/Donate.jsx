@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useIntl } from "react-intl";
 import PaypalButton from "./PaypalButton";
-import DonateCard from "../../components/PageCard/DonateCard/DonateCard";
+/*import DonateCard from "../../components/PageCard/DonateCard/DonateCard";*/
 import DonateImg from "../../images/PageCards/Donate.jpg";
+import PageCard from "../../components/PageCard/PageCard";
+import Pill from "../../components/Pill/Pill";
+import Button from "../../components/Buttons/Button";
 import "./Donate.css";
 
 export default function Donate() {
@@ -16,22 +19,41 @@ export default function Donate() {
 
   return (
     <div className="donatePage">
-      {/* Full-bleed hero like Home */}
       <div className="PageHeader">
-        <DonateCard
-          className="fullBleedNoRadius"
+        <PageCard
+          className="fullBleedNoRadius donateHeroCard"
           backgroundImage={DonateImg}
-          pillText={intl.formatMessage({ id: "donatePillText" })}
-          title={intl.formatMessage({ id: "donateCardTitle" })}
-          body={intl.formatMessage({ id: "donateCardBody" })}
-          buttons={[
-            // Scroll to the form section
-            { text: "Make a Donation", href: "#donate-form", variant: "primary", showArrow: true },
-            { text: "Learn More", to: "/about/our-story", variant: "secondary", showArrow: false },
-          ]}
-          align="left"
-          overlayOpacity={0.55}
-        />
+          title={
+            <>
+              <Pill
+                text={intl.formatMessage({ id: "donatePillText" })}
+                className="donateHeroPill"
+                showDonateIcon={true}
+              />
+              <span className="donateHeroTitle">
+                {intl.formatMessage({ id: "donateCardTitle" })}
+              </span>
+            </>
+          }
+          description={intl.formatMessage({ id: "donateCardBody" })}
+        >
+          <div className="donateHeroButtons">
+            <Button
+              text="Make a Donation"
+              href="#donate-form"
+              variant="primary"
+              size="large"
+              showArrow={false}
+            />
+            <Button
+              text="Learn More"
+              to="/about/our-story"
+              variant="secondary"
+              size="large"
+              showArrow={false}
+            />
+          </div>
+        </PageCard>
       </div>
 
       {/* Existing donate form content */}

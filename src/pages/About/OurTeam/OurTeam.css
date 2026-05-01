@@ -49,6 +49,38 @@
     align-self: stretch;
     margin-top: calc(-1 * (1rem + 2vw)); /* keeps your top-padding cancel */
     }
+
+    .ourTeamHeroCard {
+      min-height: 560px;
+      justify-content: center;
+    }
+    
+    .ourTeamHeroCard .pageCardContent {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .ourTeamHeroPill {
+      margin-bottom: 18px;
+      align-self: center;
+    }
+    
+    .ourTeamHeroTitle {
+      display: block;
+    }
+    
+    .ourTeamHeroCard .pageCardTitle {
+      width: 100%;
+      margin: 0 0 24px;
+      text-align: center;
+    }
+    
+    .ourTeamHeroCard .pageCardDescription {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
   
   /* --- Mobile --- */
   @media (max-width: 768px) {

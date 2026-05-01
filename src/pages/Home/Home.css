@@ -59,6 +59,34 @@
 	width: 100%;
 	align-self: stretch;
 	margin-top: calc(-1 * (1rem + 2vw));
+  
+	display: flex;
+	justify-content: center; /* ✅ centers PageCard */
+}
+
+.homePageCard {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+	height: 550px;
+}
+
+.homePageCard::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		135deg,
+		#1E3A5F,
+		#2D5A7B
+	);
+	opacity: 0.72;
+	z-index: 0;
+}
+
+.homePageCard > * {
+	position: relative;
+	z-index: 1;
 }
 
 .program {

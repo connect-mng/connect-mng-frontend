@@ -3,7 +3,10 @@ import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 import "./Events.css";
 import EventsImg from "../../images/PageCards/Events.jpg";
-import EventsCard from "../../components/PageCard/EventsCard/EventsCard";
+/*import EventsCard from "../../components/PageCard/EventsCard/EventsCard";*/
+import PageCard from "../../components/PageCard/PageCard";
+import Pill from "../../components/Pill/Pill";
+import Button from "../../components/Buttons/Button";
 
 export default function Events() {
   const intl = useIntl();
@@ -25,19 +28,40 @@ export default function Events() {
   return (
     <div className="eventsPage">
       <div className="fullBleed fullBleedTop">
-        <EventsCard
-          className="fullBleedNoRadius"
+        <PageCard
+          className="fullBleedNoRadius eventsHeroCard"
           backgroundImage={EventsImg}
-          pillText={intl.formatMessage({ id: "eventsPillText" })}
-          title={intl.formatMessage({ id: "events" })}
-          body={intl.formatMessage({ id: "eventsCardBody" })}
-          buttons={[
-            { text: "View Upcoming Events", to: "/events", variant: "primary" },
-            { text: "Subscribe to Calendar", to: "/events", variant: "secondary", showArrow: false },
-          ]}
-          align="left"
-          overlayOpacity={0.55}
-        />
+          title={
+            <>
+              <Pill
+                text={intl.formatMessage({ id: "eventsPillText" })}
+                className="eventsHeroPill"
+                showEventsIcon={true}
+              />
+              <span className="eventsHeroTitle">
+                {intl.formatMessage({ id: "events" })}
+              </span>
+            </>
+          }
+          description={intl.formatMessage({ id: "eventsCardBody" })}
+        >
+          <div className="eventsHeroButtons">
+            <Button
+              text="View Upcoming Events"
+              to="/events"
+              variant="primary"
+              size="large"
+              showArrow={false}
+            />
+            <Button
+              text="Subscribe to Calendar"
+              to="/events"
+              variant="secondary"
+              size="large"
+              showArrow={false}
+            />
+          </div>
+        </PageCard>
       </div>
 
       {/* ✅ Content below (table) */}

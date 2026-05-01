@@ -45,6 +45,44 @@
     width: 80vw;
 }
 
+.ourStoryHeroTitle {
+    display: inline-block;
+    margin-top: 16px;
+}
+
+.ourStoryHeroCard {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+    height: 620px;
+}
+
+.ourStoryHeroCard::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		135deg,
+		#1E3A5F,
+		#2D5A7B
+	);
+	opacity: 0.72;
+	z-index: 0;
+}
+
+.ourStoryHeroCard > * {
+	position: relative;
+	z-index: 1;
+}
+
+.ourStoryHeroButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
 @media (min-width: 768px) {
     .aboutContainer {
         padding: 20px;

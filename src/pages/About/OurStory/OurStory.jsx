@@ -11,8 +11,12 @@ import chapterTwoPicnic from '../../../images/OurStory/chapter-two-picnic.png';
 import chapterTwoSpheres from '../../../images/OurStory/chapter-two-spheres.png';
 import chapterTwoGroup from '../../../images/OurStory/chapter-two-group.png';
 import circleVec from '../../../images/OurStory/circle-vector.svg';
-import OurStoryCard from "../../../components/PageCard/OurStoryCard/OurStoryCard";
+//import OurStoryCard from "../../../components/PageCard/OurStoryCard/OurStoryCard";
 import OurStoryCardImg from "../../../images/PageCards/OurStory.jpg";
+import PageCard from "../../../components/PageCard/PageCard";
+import Button from "../../../components/Buttons/Button";
+import Pill from "../../../components/Pill/Pill";
+
 
 export default function OurStory() {
 	const intl = useIntl();
@@ -22,25 +26,41 @@ export default function OurStory() {
 			        <div className="ourStoryPage">
         {/* Hero */}
         <div className="fullBleed fullBleedTop">
-          <OurStoryCard
-            className="fullBleedNoRadius"
-            backgroundImage={OurStoryCardImg}
-            pillText={intl.formatMessage({ id: "ourStoryPillText" })}
-            title={
-              <>
-                {intl.formatMessage({ id: "ourStoryCardTitle" })}
-                <br />
-              </>
-            }
-            body={intl.formatMessage({ id: "ourStoryCardBody" })}
-            buttons={[
-              { text: intl.formatMessage({ id: "joinOurCommunity" }), to: "/get-involved", variant: "primary" },
-              { text: intl.formatMessage({ id: "learnMore" }), to: "/about/our-story", variant: "secondary" },
-            ]}
-            align="center"
-            overlayOpacity={0.55}
-          />
-        </div>
+		<PageCard
+			className="fullBleedNoRadius ourStoryHeroCard"
+  			backgroundImage={OurStoryCardImg}
+  			title={
+    			<>
+      			<Pill
+  					text={intl.formatMessage({ id: "ourStoryPillText" })}
+  					className="ourStoryHeroPill"
+  					showCircleIcon={true}
+				/>
+      			<br />
+      			<span className="ourStoryHeroTitle">
+        			{intl.formatMessage({ id: "ourStoryCardTitle" })}
+      			</span>
+    		</>
+  			}
+  			description={intl.formatMessage({ id: "ourStoryCardBody" })}
+		>
+  			<div className="ourStoryHeroButtons">
+    			<Button
+      				text={intl.formatMessage({ id: "joinOurCommunity" })}
+      				to="/get-involved"
+      				variant="primary"
+      				size="large"
+					showArrow={false}
+    		/>
+    		<Button
+      			text={intl.formatMessage({ id: "learnMore" })}
+      			to="/about/our-story"
+      			variant="secondary"
+      			size="large"
+				showArrow={false}
+    		/>
+  		</div>
+		</PageCard>
 			<div className="ourStoryTitleContainer">
 				<h1>{intl.formatMessage({ id: "ourStoryHeading1" })}</h1>
 				<h1>{intl.formatMessage({ id: "ourStoryHeading2"})}</h1>
@@ -92,6 +112,7 @@ export default function OurStory() {
 				<p><strong>{intl.formatMessage({ id: "ourStoryText6b" })}</strong></p>
 				<p><strong>{intl.formatMessage({ id: "ourStorySignOff" })}</strong></p>
 			</div>
+		</div>
 		</div>
 	);
 }

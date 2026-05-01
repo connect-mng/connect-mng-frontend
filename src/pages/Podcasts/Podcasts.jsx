@@ -4,7 +4,9 @@ import React from "react";
 import { useIntl } from "react-intl";
 
 import "./Podcasts.css";
-import PodcastsCard from "../../components/PageCard/PodcastsCard/PodcastsCard";
+/*import PodcastsCard from "../../components/PageCard/PodcastsCard/PodcastsCard";*/
+import PageCard from "../../components/PageCard/PageCard";
+import Pill from "../../components/Pill/Pill";
 import PodcastsImg from "../../images/PageCards/Podcasts.jpg"
 
 function PodcastCard({ image, title, desc, link }) {
@@ -22,30 +24,64 @@ function PodcastCard({ image, title, desc, link }) {
 	);
 }
 
-export default function Blogs() {
+export default function Podcasts() {
 	const intl = useIntl();
+
+	const podcastsGradient = `
+		radial-gradient(
+			1000px 520px at 40% 45%,
+			rgba(255, 255, 255, 0.10),
+			rgba(255, 255, 255, 0) 60%
+		),
+		linear-gradient(
+			180deg,
+			#1E3A5F,
+			#587C45,
+			#2D4A6F
+		)
+	`;
 
 	return (
 		<div className={"podcastContainer"}>
 			<div className="PageHeader">
-			<PodcastsCard
-				pillText={intl.formatMessage({ id: "Podcast" })} 
-				title="Behind The Badge"
-				body="Behind The Badge is Connect MNG's signature podcast series featuring candid conversations with Mongolian American students and young professionals. Each episode takes you behind the scenes to explore the personal stories, career journeys, and cultural experiences that shape our community. Tune in for authentic discussions about identity, ambition, and what it means to forge your own path."
-				coverImageSrc={PodcastsImg}
-				coverImageAlt="Behind The Badge cover"
-			/>
+				<PageCard
+					className="fullBleedNoRadius podcastHeroCard"
+					backgroundImage={podcastsGradient}
+					title={
+						<>
+							<Pill
+								text={intl.formatMessage({ id: "Podcast" })}
+								className="podcastHeroPill"
+							/>
+							<span className="podcastHeroTitle">Behind The Badge</span>
+						</>
+					}
+					description="Behind The Badge is Connect MNG's signature podcast series featuring candid conversations with Mongolian American students and young professionals. Each episode takes you behind the scenes to explore the personal stories, career journeys, and cultural experiences that shape our community. Tune in for authentic discussions about identity, ambition, and what it means to forge your own path."
+					media={
+						<img
+							src={PodcastsImg}
+							alt="Behind The Badge cover"
+							className="podcastHeroImage"
+						/>
+					}
+				/>
 			</div>
 
-			<h1>{intl.formatMessage({id: "podcasts"})}</h1>
-			<PodcastCard image={''}
+			<h1>{intl.formatMessage({ id: "podcasts" })}</h1>
+
+			<PodcastCard
+				image={""}
 				title={"Connect MNG - Where Your Journey is Our Journey"}
 				desc={"desc"}
-				link={""} />
-			<PodcastCard image={''}
+				link={""}
+			/>
+
+			<PodcastCard
+				image={""}
 				title={"All the basics you need to know about resume"}
 				desc={"desc2"}
-				link={""} />
+				link={""}
+			/>
 		</div>
 	);
-};
+}

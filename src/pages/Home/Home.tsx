@@ -1,7 +1,7 @@
 import welcomeBlogThumbnail from "../../images/blogs/welcomeBlog/welcomeBlogThumbnail.jpg";
 import resumeBlogThumbnail from "../../images/blogs/resumeBlog/resumeBlogThumbnail.jpg";
 import StyledLink from "../../components/StyledLink/StyledLink";
-import PageCard from "../../components/PageCard/HomePageCard/PageCard";
+import PageCard from "../../components/PageCard/PageCard";
 import prog1 from "../../images/programs/prog1.png";
 import prog2 from "../../images/programs/prog2.png";
 import prog3 from "../../images/programs/prog3.png";
@@ -16,6 +16,7 @@ import { useIntl } from "react-intl";
 import "./Home.css";
 import { FaUserPlus, FaHeart, FaEnvelope, FaDollarSign } from "react-icons/fa";
 import ActionCard from "../../components/ActionCard/ActionCard";
+import Button from "../../components/Buttons/Button";
 
 
 export default function Home() {
@@ -39,16 +40,27 @@ export default function Home() {
 	];
 	return (
 		<div className={"homeContainer"}>
-			<div className='PageHeader'>
-			<PageCard
-        		title={intl.formatMessage({ id: "homeCardTitle" })}
-       			body={intl.formatMessage({ id: "homeCardDesc" })}
-        		align="left"
-        		backgroundImage={HomeImg}
-        		overlay={true}
-        		cta={{ text: intl.formatMessage({ id: "getInvolved" }), to: "/get-involved" }}
-      			/>
-				</div>
+		<div className="PageHeader">
+  			<PageCard
+    			title={intl.formatMessage({ id: "homeCardTitle" })}
+    			description={intl.formatMessage({ id: "homeCardDesc" })}
+    			//buttonText={intl.formatMessage({ id: "getInvolved" })}
+    			//to="/get-involved"
+    			//variant="primary"
+    			backgroundImage={HomeImg}
+    			className="homePageCard"
+    			//ariaLabel={intl.formatMessage({ id: "getInvolved" })}
+  			>
+				    <Button
+      					text={intl.formatMessage({ id: "getInvolved" })}
+      					to="/get-involved"
+      					variant="primary"
+      					size="small"
+      					showArrow
+      					ariaLabel={intl.formatMessage({ id: "getInvolved" })}
+    				/>
+  			</PageCard>
+		</div>
 				<div className={"missionTextContainer"}>
 					<h1>{intl.formatMessage({ id: "missionAndImpact" }).toUpperCase()}</h1>
 					<p>{intl.formatMessage({ id: "ourStoryTextmission" })}</p>

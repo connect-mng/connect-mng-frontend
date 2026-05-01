@@ -74,6 +74,46 @@
   .event-link:hover {
     text-decoration: underline;
   }
+
+  .eventsHeroCard {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    min-height: 560px;
+  }
+  
+  .eventsHeroCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      #1E3A5F,
+      #2D5A7B
+    );
+    opacity: 0.72;
+    z-index: 0;
+  }
+  
+  .eventsHeroCard > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .eventsHeroPill {
+    margin-bottom: 18px;
+  }
+  
+  .eventsHeroTitle {
+    display: block;
+  }
+  
+  .eventsHeroButtons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
   
   /* Responsive Adjustments */
   @media (max-width: 768px) {

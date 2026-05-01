@@ -4,6 +4,8 @@ import myImage from "../../images/blogs/Iconhome.png";
 
 import StyledLink from "../../components/StyledLink/StyledLink.jsx";
 import BlogsCard from "../../components/PageCard/BlogsCard/BlogsCard";
+import PageCard from "../../components/PageCard/PageCard";
+import Pill from "../../components/Pill/Pill";
 
 import React from "react";
 import { useIntl } from "react-intl";
@@ -50,15 +52,17 @@ export default function Blogs() {
   return (
     <div className={"blogContainer"}>
       <div className="PageHeader">
-        <BlogsCard
-          className="fullBleedNoRadius"
-          pillText={intl.formatMessage({ id: "blogs" })}
-          title={intl.formatMessage({ id: "blogs" }).toUpperCase()}
-          body={intl.formatMessage({ id: "blogsCardBody" })}
-          coverImageSrc={welcomeBlogThumbnail}
-          coverImageAlt="Blogs cover"
-          align="left"
-        />
+      <PageCard
+        className="fullBleedNoRadius blogsHeroCard"
+        backgroundImage="linear-gradient(180deg, #1E3A5F 0%, #2D5A4A 50%, #587C45 100%)"
+        title={
+          <>
+            <Pill text={intl.formatMessage({ id: "blogs" })} className="blogsHeroPill" />
+          </>
+        }
+        description={intl.formatMessage({ id: "blogsCardBody" })}
+        >
+      </PageCard>
       </div>
 
       <div className="blogsContent">

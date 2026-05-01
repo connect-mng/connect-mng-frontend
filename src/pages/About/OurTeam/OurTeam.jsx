@@ -2,7 +2,8 @@ import React from "react";
 import { useIntl } from "react-intl";
 
 import BoardMemberGallery from "../../../components/BoardMemberGallery/BoardMemberGallery.jsx";
-import OurTeamCard from "../../../components/PageCard/OurTeamCard/OurTeamCard";
+import PageCard from "../../../components/PageCard/PageCard";
+import Pill from "../../../components/Pill/Pill";
 
 import "./OurTeam.css";
 
@@ -13,13 +14,22 @@ export default function OurTeam() {
     <div className="ourTeamPage">
       {/* ✅ Full-bleed PageHeader */}
       <div className="PageHeader">
-        <OurTeamCard
+        <PageCard
           className="fullBleedNoRadius"
-          pillText={intl.formatMessage({ id: "meetTheTeam" })}
-          title={intl.formatMessage({ id: "ourTeam" })}
-          body={intl.formatMessage({ id: "ourTeamDesc" })}
-          backgroundColor="#5F7B49"   
-          align="center"
+          backgroundImage="linear-gradient(135deg, #587C45, #587C45)"
+          title={
+            <>
+              <Pill
+                text={intl.formatMessage({ id: "meetTheTeam" })}
+                className="ourTeamHeroPill"
+                showPeopleIcon={true}
+              />
+              <span className="ourTeamHeroTitle">
+                {intl.formatMessage({ id: "ourTeam" })}
+              </span>
+            </>
+          }
+          description={intl.formatMessage({ id: "ourTeamDesc" })}
         />
       </div>
 
