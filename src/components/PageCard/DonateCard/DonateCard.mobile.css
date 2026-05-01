@@ -1,0 +1,11 @@
+.donateHeroCard {
+    min-height: 440px;
+  }
+
+  .donateHeroCard__inner {
+    max-width: 100%;
+  }
+
+  .donateHeroCard__body {
+    max-width: 100%;
+  }

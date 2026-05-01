@@ -1,16 +1,9 @@
-.aboutContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+/* ✅ Home-style page wrapper */
+.ourTeamPage {
     background-image: url("../../../images/background_white.jpg");
     background-size: cover;
     background-position: center;
-    padding-left: 140px !important;
-    padding-right: 140px !important;
-}
-
-.ourStoryAboutUs {
+  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,36 +50,25 @@
 .aboutValuesDesc p {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 1vw;
-    width: 100%;
-    text-align: left;
-    color: #4A4A4A;
-    font-size: calc(1rem + 0.3vw);
-
-}
-
-.team-image {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border-radius: 10px;
-}
-
-.aboutHeader div {
+  }
+  
+  /* keep your about header styles */
+  .aboutHeader {
+    padding-bottom: 50px;
+  }
+  
+  .aboutHeader div {
     font-family: Inter;
     font-weight: 300;
     line-height: 30px;
     text-align: justify;
-}
-
-.aboutHeader h1 {
+  }
+  
+  .aboutHeader h1 {
     font-family: Inter;
     font-weight: 700;
     font-size: 34px;
     line-height: 100%;
-    letter-spacing: 0%;
     padding-bottom: 20px;
 }
 
@@ -338,37 +320,54 @@
         padding: 20px;
     }
 
-    .ourStoryCardContainer {
-        width: 50%;
-        padding: 2vw;
-        margin: 20px 0;
+    .ourTeamHeroCard {
+      min-height: 560px;
+      justify-content: center;
     }
-
-    .ourStoryCardTextContainer {
-        padding: 2vw;
-        text-align: center;
+    
+    .ourTeamHeroCard .pageCardContent {
+      width: 100%;
+      align-items: center;
+      text-align: center;
     }
-
-    .ourStoryTitleContainer h1 {
-        font-size: calc(20px + 2vw);
+    
+    .ourTeamHeroPill {
+      margin-bottom: 18px;
+      align-self: center;
     }
-
-    .team-image {
-        margin: 20px auto;
+    
+    .ourTeamHeroTitle {
+      display: block;
     }
-
-    .imgContainer {
-        display: flex;
-        justify-content: space-around;
+    
+    .ourTeamHeroCard .pageCardTitle {
+      width: 100%;
+      margin: 0 0 24px;
+      text-align: center;
     }
-
-    .infoContainer {
-        display: flex;
-        justify-content: space-around;
+    
+    .ourTeamHeroCard .pageCardDescription {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
     }
-
-    .textContainer {
-        display: flex;
-        align-items: center;
+  
+  /* --- Mobile --- */
+  @media (max-width: 768px) {
+    .ourTeamPage {
+      padding: 30px 20px;
     }
-}
+  
+    .ourTeamContent {
+      width: 100%;
+    }
+  
+    .aboutHeader h1 {
+      font-size: 28px;
+    }
+  
+    .aboutHeader div {
+      line-height: 26px;
+    }
+  }
+  

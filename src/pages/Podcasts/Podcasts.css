@@ -47,8 +47,90 @@
 	font-size: calc(1.1vw);
 }
 
+.podcastHeroCard {
+	min-height: 500px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+	padding: 56px 48px;
+}
+
+.podcastHeroCard .pageCardContent {
+	max-width: 700px;
+	flex: 1;
+}
+
+.podcastHeroPill {
+	margin-bottom: 18px;
+	align-self: flex-start;
+}
+
+.podcastHeroTitle {
+	display: block;
+	margin-top: 8px;
+}
+
+.podcastHeroImage {
+	width: 320px;
+	height: 320px;
+	object-fit: cover;
+	display: block;
+}
+
+.podcastContainer .PageHeader {
+	width: calc(100% + 48px);
+	margin-left: -24px;
+	margin-right: -24px;
+	align-self: stretch;
+	margin-top: -95px;
+}
+
+.pageCardContent {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	flex: 1;
+  }
+  
+  .pageCardMedia {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+  }
+  
+  .pageCardActions {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin-top: 8px;
+  }
+
+  .podcastHeroCard .pageCardMedia {
+	flex: 0 0 320px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+
 @media (max-width: 750px) {
 	.podcastContainer {
 		padding-top: 35px;
+	}
+
+	.podcastHeroCard {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 40px 24px;
+		gap: 24px;
+	}
+
+	.podcastHeroImage {
+		width: 220px;
+		align-self: center;
 	}
 }

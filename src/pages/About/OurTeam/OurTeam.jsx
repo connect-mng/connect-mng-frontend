@@ -1,7 +1,6 @@
 import BoardMemberGallery from "../../../components/BoardMemberGallery/BoardMemberGallery.jsx";
 import InternGallery from "../../../components/InternGallery/InternGallery.jsx";
 import React from "react";
-
 import { useIntl } from "react-intl";
 
 import joinTeamImage from "../../../images/join.webp";

@@ -2,57 +2,101 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 import "./Events.css";
+import EventsImg from "../../images/PageCards/Events.jpg";
+/*import EventsCard from "../../components/PageCard/EventsCard/EventsCard";*/
+import PageCard from "../../components/PageCard/PageCard";
+import Pill from "../../components/Pill/Pill";
+import Button from "../../components/Buttons/Button";
 
 export default function Events() {
-    const intl = useIntl();
-    const events = [
-        // {
-        //     date: intl.formatMessage({ id: "date" }),
-        //     sessions: [
-        //         { time: intl.formatMessage({ id: "time" }), name: "Resume help", location: "Capital One Cafe", link: "/events/resume-help" },
-        //         { time: intl.formatMessage({ id: "time1" }), name: "Happy hour", location: "Bangrak", link: "/events/happy-hour" },
-        //     ],
-        // },
+  const intl = useIntl();
+
+  const events = [
+    {
+      date: "September 27th, 2025",
+      sessions: [
         {
-            date: "September 27th, 2025",
-            sessions: [
-                { time: "12:00 PM - 2:00 PM", name: "Resume Building", location: "Capital One Cafe SLU", link: "/events/resume-building" },
-            ],
+          time: "12:00 PM - 2:00 PM",
+          name: "Resume Building",
+          location: "Capital One Cafe SLU",
+          link: "/events/resume-building",
         },
+      ],
+    },
+  ];
 
-    ];
+  return (
+    <div className="eventsPage">
+      <div className="fullBleed fullBleedTop">
+        <PageCard
+          className="fullBleedNoRadius eventsHeroCard"
+          backgroundImage={EventsImg}
+          title={
+            <>
+              <Pill
+                text={intl.formatMessage({ id: "eventsPillText" })}
+                className="eventsHeroPill"
+                showEventsIcon={true}
+              />
+              <span className="eventsHeroTitle">
+                {intl.formatMessage({ id: "events" })}
+              </span>
+            </>
+          }
+          description={intl.formatMessage({ id: "eventsCardBody" })}
+        >
+          <div className="eventsHeroButtons">
+            <Button
+              text="View Upcoming Events"
+              to="/events"
+              variant="primary"
+              size="large"
+              showArrow={false}
+            />
+            <Button
+              text="Subscribe to Calendar"
+              to="/events"
+              variant="secondary"
+              size="large"
+              showArrow={false}
+            />
+          </div>
+        </PageCard>
+      </div>
 
-    return (
-        <div className="eventsContainer">
-            <h1> {intl.formatMessage({ id: "Calendar" })}</h1>
+      {/* ✅ Content below (table) */}
+      <div className="eventsContent">
+        <h1>{intl.formatMessage({ id: "Calendar" })}</h1>
 
-            {events.map((event, index) => (
-                <div key={index} className="event-section">
-                    <h2 className="event-header">{event.date}</h2>
-                    <table className="event-table">
-                        <thead>
-                            <tr>
-                                <th>{intl.formatMessage({ id: "Time" })}</th>
-                                <th>{intl.formatMessage({ id: "Event" })}</th>
-                                <th>{intl.formatMessage({ id: "Location" })}</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {event.sessions.map((session, i) => (
-                                <tr key={i}>
-                                    <td>{session.time}</td>
-                                    <td>
-                                        <Link to={session.link} className="event-link">
-                                            {session.name}
-                                        </Link>
-                                    </td>
-                                    <td>{session.location}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            ))}
-        </div>
-    );
+        {events.map((event, index) => (
+          <div key={index} className="event-section">
+            <h2 className="event-header">{event.date}</h2>
+
+            <table className="event-table">
+              <thead>
+                <tr>
+                  <th>{intl.formatMessage({ id: "Time" })}</th>
+                  <th>{intl.formatMessage({ id: "Event" })}</th>
+                  <th>{intl.formatMessage({ id: "Location" })}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {event.sessions.map((session, i) => (
+                  <tr key={i}>
+                    <td>{session.time}</td>
+                    <td>
+                      <Link to={session.link} className="event-link">
+                        {session.name}
+                      </Link>
+                    </td>
+                    <td>{session.location}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

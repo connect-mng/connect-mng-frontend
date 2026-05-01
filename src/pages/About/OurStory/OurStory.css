@@ -3,19 +3,162 @@
   color: #374151;
 }
 
-.chapterLabel {
-  display: inline-block;
-  background-color: #EDF5E1;
-  color: #5C7556;
-  padding: 0.4rem 1.2rem;
-  border-radius: 2rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
+.ourStoryTitleContainer h1 {
+    font-size: calc(16px + 2.5vw);
+    text-align: center;
+    margin-bottom: 1vw;
+    padding: 0;
+    margin-top: 40px;
 }
 
-.badgeIcon {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
+.ourStoryCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 1vw;
+    padding: 1.5vw;
+    width: 90%;
+    margin: 10px 0;
+}
+
+.ourStoryCardTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1vw;
+    width: 100%;
+    text-align: left;
+    color: #4A4A4A;
+    font-size: calc(1rem + 0.3vw);
+}
+
+.team-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.ourStoryDesc {
+    width: 80vw;
+}
+
+.ourStoryHeroTitle {
+    display: inline-block;
+    margin-top: 16px;
+}
+
+.ourStoryHeroCard {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+    height: 620px;
+}
+
+.ourStoryHeroCard::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		135deg,
+		#1E3A5F,
+		#2D5A7B
+	);
+	opacity: 0.72;
+	z-index: 0;
+}
+
+.ourStoryHeroCard > * {
+	position: relative;
+	z-index: 1;
+}
+
+.ourStoryHeroButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .aboutContainer {
+        padding: 20px;
+    }
+
+    .ourStoryCardContainer {
+        width: 50%;
+        padding: 2vw;
+        margin: 20px 0;
+    }
+
+    .ourStoryCardTextContainer {
+        padding: 2vw;
+        text-align: center;
+    }
+
+    .ourStoryTitleContainer h1 {
+        font-size: calc(20px + 2vw);
+    }
+
+    .team-image {
+        margin: 20px auto;
+    }
+}
+
+/*Mobile responsive our story*/
+@media screen and (max-width: 750px) {
+    .aboutContainer {
+        padding: 30px 40px !important;
+        align-items: stretch;
+    }
+
+    .ourStoryTitleContainer {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 1rem 0;
+    }
+
+    .ourStoryTitleContainer h1 {
+        font-size: calc(5px + 8vw);
+        margin: 0;
+        text-align: left;
+    }
+
+    .ourStoryDesc {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 1rem 0;
+        font-size: calc(5px + 2vw);
+        text-align: left;
+    }
+
+    .ourStoryCardContainer {
+        width: 100%;
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .ourStoryCardTextContainer {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 1rem 0;
+        font-size: calc(5px + 2vw);
+        text-align: left;
+    }
+
+    .team-image {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    /* .ourStoryTitle {
+        font-size: calc(5px + 8vw);
+    }
+
+    .ourStoryDesc {
+        font-size: calc(5px + 2vw);
+    } */
 }
