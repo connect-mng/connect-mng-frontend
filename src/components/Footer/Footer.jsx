@@ -1,61 +1,105 @@
-import NewsletterSubscribe from "../NewsletterSubscribe/NewsletterSubscribe.jsx";
-import SocialsBar from "../SocialsBar/SocialsBar.jsx";
 import React from "react";
-import { useIntl } from "react-intl";
-
 import { Link } from "react-router-dom";
+import { useIntl } from "react-intl";
+import logo from "../../images/footer-logo.png";
+import fb2 from "../../images/socials/fb2.png";
+import insta2 from "../../images/socials/insta2.png";
+import linkedin2 from "../../images/socials/linkedin2.png";
 
-import "./Footer.css";
+import "./FooterDesktop.css";
+import "./FooterMobile.css";
 
 export default function Footer() {
     const intl = useIntl();
+
     return (
-        <div className={"footerContainer"}>
-            <div className={"mobile-officialLinksContainer"}>
-                <div>
-                    <Link>{intl.formatMessage({ id: "termsOfUse" })}</Link>
-                </div>
-                <div>
-                    <Link>{intl.formatMessage({ id: "privacyPolicy" })}</Link>
-                </div>
-                <div>©2024 Connect MNG</div>
-            </div>
-            <div className={"footerPageLinksContainer"}>
-                <div className={"footerLinkContainer"}>
-                    <h3>{intl.formatMessage({ id: "explore" }).toUpperCase()}</h3>
-                    <Link to={"/"}>{intl.formatMessage({ id: "home" }).toUpperCase()}</Link>
-                    <Link to={"/resources/blogs"}>{intl.formatMessage({ id: "blogs" }).toUpperCase()}</Link>
-                </div>
-                <div className={"footerLinkContainer"}>
-                    <h3>{intl.formatMessage({ id: "engage" }).toUpperCase()}</h3>
-                    <Link to={"/get-involved/donate"}>{intl.formatMessage({ id: "donate" }).toUpperCase()}</Link>
-                    <Link to={"/get-involved/internships"}>{intl.formatMessage({ id: "internships" }).toUpperCase()}</Link>
-                    <Link to={"/get-involved/volunteer"}>{intl.formatMessage({ id: "volunteer" }).toUpperCase()}</Link>
-                </div>
-                <div className={"footerLinkContainer"}>
-                    <h3>{intl.formatMessage({ id: "about" }).toUpperCase()}</h3>
-                    <Link to={"about-us/our-story"}>{intl.formatMessage({ id: "ourStory" }).toUpperCase()}</Link>
-                    <Link to={"about-us/our-team"}>{intl.formatMessage({ id: "ourTeam" }).toUpperCase()}</Link>
-                </div>
-            </div>
-            <div className={"footerSocialsLinksContainer"}>
-                <div className={"footerSocialsBarContainer"}>
-                    <h3>
-                        {intl.formatMessage({ id: "connectWithUs" })}
-                    </h3>
-                    <SocialsBar isInHeader={false} />
-                </div>
-                <NewsletterSubscribe />
-                <div className={"officialLinksContainer"}>
-                    <div>
-                        <Link>{intl.formatMessage({ id: "termsOfUse" })}</Link>
+        <footer className="footer">
+            <div className="footer-content">
+                <div className="footer-column footer-branding">
+                    <img src={logo} alt="Connect MNG Logo" className="footer-logo" />
+                    <p className="footer-mission">
+                        {intl.formatMessage({ id: "footerMission" })}
+                    </p>
+                    <div className="footer-socials">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61554736732199"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="footer-social-button"
+                            aria-label="Facebook"
+                        >
+                            <img src={fb2} alt="Facebook" />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/connect_mng/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="footer-social-button"
+                            aria-label="Instagram"
+                        >
+                            <img src={insta2} alt="Instagram" />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/company/connect-mng/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="footer-social-button"
+                            aria-label="LinkedIn"
+                        >
+                            <img src={linkedin2} alt="LinkedIn" />
+                        </a>
                     </div>
-                    <div>
-                        <Link>{intl.formatMessage({ id: "privacyPolicy" })}</Link>
+                </div>
+
+                <div className="footer-column footer-links">
+                    <h3 className="footer-heading">Quick Links</h3>
+                    <nav className="footer-nav">
+                        <Link to="/about-us/our-story" className="footer-link footer-link-desktop">
+                            About Us
+                        </Link>
+                        <Link to="/about-us/our-story" className="footer-link footer-link-mobile">
+                            About Us
+                        </Link>
+                        <Link to="/resources/blogs" className="footer-link footer-link-desktop">
+                            Blogs
+                        </Link>
+                        <Link to="/programs" className="footer-link footer-link-mobile">
+                            Programs
+                        </Link>
+                        <Link to="/events" className="footer-link footer-link-desktop">
+                            Events
+                        </Link>
+                        <Link to="/events" className="footer-link footer-link-mobile">
+                            Community
+                        </Link>
+                        <Link to="/get-involved/volunteer" className="footer-link">
+                            Get Involved
+                        </Link>
+                    </nav>
+                </div>
+
+                <div className="footer-column footer-contact">
+                    <h3 className="footer-heading">Contact</h3>
+                    <div className="footer-contact-info">
+                        <a href="mailto:connectmng@gmail.com" className="footer-email">
+                            connectmng@gmail.com
+                        </a>
+                        <Link to="/privacy-policy" className="footer-link">
+                            Privacy Policy
+                        </Link>
+                        <Link to="/terms-of-service" className="footer-link">
+                            Terms of Service
+                        </Link>
                     </div>
-                    <div>©2024 Connect MNG</div>
                 </div>
             </div>
-        </div>
+
+            <div className="footer-bottom">
+                <div className="footer-divider"></div>
+                <p className="footer-copyright">
+                    © 2025 ConnectMNG USA. All rights reserved.
+                </p>
+            </div>
+        </footer>
     );
-};
+}

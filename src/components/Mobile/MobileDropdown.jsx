@@ -1,7 +1,6 @@
 import React from 'react';
 // import { Link, NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-import NavLink from "../Navigation/NavLink.jsx";
 import MobileNavDropdown from "./MobileNavDropdown.jsx";
 import { GoTriangleDown } from "react-icons/go";
 
@@ -12,38 +11,38 @@ export default function MobileDropdown() {
 
     const intl = useIntl();
     const [activeIndex, setActiveIndex] = useState(0);
-    const [showResources, setShowResources] = useState(false);
+    const [showPrograms, setShowPrograms] = useState(false);
     const [showActivities, setShowActivities] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
 
     function handleNavLinkSelect(activeIndex) {
         setActiveIndex(activeIndex);
         setShowActivities(false);
-        setShowResources(false);
+        setShowPrograms(false);
         setShowAbout(false);
     };
 
     function handleVolunteerSelect() {
         setShowActivities(!showActivities);
-        setShowResources(false);
+        setShowPrograms(false);
         setShowAbout(false);
     };
 
     const handleAboutSelect = () => {
         setShowAbout(!showAbout);
         setShowActivities(false);
-        setShowResources(false);
+        setShowPrograms(false);
     }
 
-    function handleResourcesSelect() {
-        setShowResources(!showResources);
+    function handleProgramsSelect() {
+        setShowPrograms(!showPrograms);
         setShowActivities(false);
         setShowAbout(false);
     };
 
     function handleDropdownSelect(selectedIndex) {
         setShowActivities(false);
-        setShowResources(false);
+        setShowPrograms(false);
         setShowAbout(false);
         setActiveIndex(selectedIndex + 6)
     }
@@ -51,12 +50,9 @@ export default function MobileDropdown() {
     return (
         <div className="mobileNavBarContainer">
             <div className="mobileNavLinks">
-                <NavLink text={intl.formatMessage({ id: "home" })} homeButton={true} to="/" className="homeButton" >Home</NavLink>
-                <Link to="/programs" className="mobileNavLink">{intl.formatMessage({ id: "programs" })}</Link>
-                <Link to="/events" className="mobileNavLink">{intl.formatMessage({ id: "events" })}</Link>
-                <div className={"mobileNavLink"} onClick={handleAboutSelect}>
-                    {intl.formatMessage({ id: "about" })}
-                    <GoTriangleDown />
+                <div className={"mobileNavLink mobileNavLinkDropdown"} onClick={handleAboutSelect}>
+                    <span className="mobileNavText">{intl.formatMessage({ id: "about" })}</span>
+                    <GoTriangleDown className="mobileNavChevron" />
                 </div>
                 {showAbout ? (
                     <MobileNavDropdown
@@ -70,23 +66,32 @@ export default function MobileDropdown() {
                     />
                 ) : null}
 
-                <div className={"mobileNavLink"} onClick={handleResourcesSelect}>
-                    {intl.formatMessage({ id: "resources" })}
-                    <GoTriangleDown />
+                <Link to="/resources/blogs" className="mobileNavLink">{intl.formatMessage({ id: "blogs" })}</Link>
+                <Link to="/events" className="mobileNavLink">{intl.formatMessage({ id: "events" })}</Link>
+                <Link to="/resources/podcasts" className="mobileNavLink">{intl.formatMessage({ id: "podcasts" })}</Link>
+                <div className={"mobileNavLink mobileNavLinkDropdown"} onClick={handleProgramsSelect}>
+                    <span className="mobileNavText">{intl.formatMessage({ id: "programs" })}</span>
+                    <GoTriangleDown className="mobileNavChevron" />
                 </div>
-                {showResources ? (
+                {showPrograms ? (
                     <MobileNavDropdown
                         onSelect={(selectedIndex) => handleDropdownSelect(selectedIndex)}
                         options={[
-                            intl.formatMessage({ id: "blogs" }),
+                            intl.formatMessage({ id: "culturalCompass" }),
+                            intl.formatMessage({ id: "mentorship" }),
+                            intl.formatMessage({ id: "resumeBoost" }),
                         ]}
-                        links={["/resources/blogs"]}
+                        links={[
+                            "/programs/cultural-compass-program",
+                            "/programs/mentorship-program",
+                            "/programs/resume-boost-program",
+                        ]}
                     />
                 ) : null}
 
-                <div className={"mobileNavLink"} onClick={handleVolunteerSelect}>
-                    {intl.formatMessage({ id: "getInvolved" })}
-                    <GoTriangleDown />
+                <div className={"mobileNavLink mobileNavLinkDropdown"} onClick={handleVolunteerSelect}>
+                    <span className="mobileNavText">{intl.formatMessage({ id: "getInvolved" })}</span>
+                    <GoTriangleDown className="mobileNavChevron" />
                 </div>
                 {showActivities ? (
                     <MobileNavDropdown
@@ -103,8 +108,6 @@ export default function MobileDropdown() {
                         ]}
                     />
                 ) : null}
-
-                <Link to="/contact-us" className="mobileNavLink">{intl.formatMessage({ id: "contactUs" }).toUpperCase()}</Link>
             </div>
         </div>
     )
