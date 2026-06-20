@@ -1,0 +1,115 @@
+.team-join-section {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    overflow: hidden;
+    border-radius: 36px;
+    background: #2b436d;
+    box-shadow: 0 24px 54px rgba(30, 41, 59, 0.16);
+}
+
+.team-join-copy {
+    padding: 52px 56px;
+    color: #ffffff;
+}
+
+.team-join-title {
+    margin: 0 0 28px;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 500;
+}
+
+.team-join-body {
+    margin: 0 0 12px;
+    max-width: 520px;
+    font-size: 22px;
+    line-height: 40px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.team-join-list {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.team-join-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 18px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.team-join-check {
+    width: 30px;
+    height: 30px;
+    margin-top: 1px;
+    border-radius: 999px;
+    background: #a9c671;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.team-join-actions {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.team-join-button {
+    min-width: 210px;
+    padding: 18px 28px;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.team-join-button:hover {
+    transform: translateY(-1px);
+}
+
+.team-join-button-primary {
+    background: #a9c671;
+    color: #ffffff;
+}
+
+.team-join-button-secondary {
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    color: #ffffff;
+    background: transparent;
+}
+
+.team-join-image-panel {
+    min-height: 100%;
+    background: #2b436d;
+    padding: 28px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-join-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+}

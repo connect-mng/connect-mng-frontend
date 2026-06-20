@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+    .team-join-section {
+        grid-template-columns: 1fr;
+        border-radius: 28px;
+    }
+
+    .team-join-copy {
+        padding: 28px 22px;
+    }
+
+    .team-join-title {
+        margin-bottom: 18px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .team-join-body {
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .team-join-item {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .team-join-actions {
+        flex-direction: column;
+    }
+
+    .team-join-button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .team-join-image-panel {
+        height: 280px;
+    }
+}

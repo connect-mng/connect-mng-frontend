@@ -1,0 +1,62 @@
+@media (max-width: 768px) {
+    .team-member-section {
+        padding: 0 20px;
+    }
+
+    .team-member-section-header {
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .team-member-pill {
+        padding: 10px 20px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .team-member-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .team-member-description {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .team-member-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-member-media {
+        height: 360px;
+        border-radius: 24px;
+    }
+
+    .team-member-link {
+        top: 18px;
+        right: 18px;
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+    }
+
+    .team-member-overlay {
+        padding: 22px;
+    }
+
+    .team-member-name {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .team-member-role {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .team-member-placeholder span {
+        font-size: 72px;
+    }
+}

@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+    .team-values-section {
+        padding: 0 20px;
+    }
+
+    .team-values-header {
+        margin-bottom: 32px;
+    }
+
+    .team-values-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .team-values-description {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .team-values-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .team-value-card {
+        gap: 16px;
+    }
+
+    .team-value-icon {
+        width: 104px;
+        height: 104px;
+        font-size: 48px;
+    }
+
+    .team-value-heading {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .team-value-copy {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
