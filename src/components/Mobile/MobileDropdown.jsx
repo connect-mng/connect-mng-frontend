@@ -61,7 +61,7 @@ export default function MobileDropdown() {
                             intl.formatMessage({ id: "ourStory" }),
                             intl.formatMessage({ id: "ourTeam" }),
                         ]}
-                        links={["/resources/blogs/welcome-blog", "/about-us/our-team"]}
+                        links={["/about-us/our-story", "/about-us/our-team"]}
 
                     />
                 ) : null}
