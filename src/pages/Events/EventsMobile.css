@@ -1,0 +1,386 @@
+@media (max-width: 768px) {
+
+  /* ===== HERO ===== */
+  .eventsHero {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 5rem 1.5rem 4rem;
+    color: #fff;
+    text-align: left;
+  }
+
+  .eventsHero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(25, 50, 75, 0.78);
+    z-index: 0;
+  }
+
+  .eventsHeroContent {
+    position: relative;
+    z-index: 1;
+  }
+
+  .eventsBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .eventsBadgeIcon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+  }
+
+  .eventsHero h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+  }
+
+  .eventsHero p {
+    font-size: 0.95rem;
+    color: rgba(229, 231, 235, 0.95);
+    line-height: 1.7;
+    margin: 0 0 1.75rem;
+  }
+
+  .eventsHeroButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .eventsHeroPrimary {
+    background-color: #8FB369;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .eventsHeroSecondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /* ===== SECTION HEADER ===== */
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 1.75rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.375rem;
+    color: #1F2937;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+  }
+
+  .sectionHeader p {
+    font-size: 0.9rem;
+    color: #6B7280;
+  }
+
+  /* ===== UPCOMING EVENTS ===== */
+  .upcomingEventsSection {
+    padding: 3rem 1.25rem;
+    background-color: #fff;
+  }
+
+  .eventsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 100%;
+  }
+
+  /* ===== UPCOMING EVENT CARD ===== */
+  .eventCard {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eventCardImageWrap {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .eventCardImageWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .eventCardBadges {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 0.35rem;
+  }
+
+  .eventCardBody {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .eventCardTitle {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1A5276;
+    margin: 0 0 0.65rem;
+    line-height: 1.4;
+  }
+
+  .eventMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .eventMeta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    color: #6B7280;
+  }
+
+  .eventMeta span svg {
+    flex-shrink: 0;
+    color: #9CA3AF;
+  }
+
+  .eventCardDesc {
+    font-size: 0.78rem;
+    color: #6B7280;
+    line-height: 1.55;
+    margin: 0 0 0.8rem;
+    flex: 1;
+  }
+
+  .eventCardFooterRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid #F3F4F6;
+  }
+
+  .eventRegistered {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    color: #6B7280;
+  }
+
+  .eventRegistered svg {
+    color: #9CA3AF;
+  }
+
+  .eventSpots {
+    font-size: 0.75rem;
+    color: #6B7280;
+  }
+
+  .registerNowBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    border: 1.5px solid #8FB369;
+    background: transparent;
+    color: #5C7556;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+  }
+
+  /* ===== PAST EVENTS ===== */
+  .pastEventsSection {
+    padding: 3rem 1.25rem;
+    background-color: #F9FAFB;
+  }
+
+  .pastEventCard {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pastEventImageWrap {
+    position: relative;
+    height: 165px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .pastEventImageWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pastEventCategoryBadge {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    background: rgba(30, 40, 55, 0.72);
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.375rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+  }
+
+  .pastEventCardBody {
+    padding: 1rem;
+  }
+
+  .pastEventTitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0 0 0.65rem;
+    line-height: 1.4;
+  }
+
+  .pastEventMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .pastEventMeta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    color: #6B7280;
+  }
+
+  .pastEventMeta span svg {
+    flex-shrink: 0;
+    color: #9CA3AF;
+  }
+
+  .pastEventsButtonWrap {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .viewAllPastBtn {
+    background-color: #8FB369;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    width: 80%;
+  }
+
+  /* ===== CTA SECTION ===== */
+  .eventsCtaSection {
+    padding: 3.5rem 1.25rem;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eventsCtaIcon {
+    color: #8FB369;
+    margin-bottom: 1rem;
+    stroke-width: 1.5;
+  }
+
+  .eventsCtaSection h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0 0 0.75rem;
+  }
+
+  .eventsCtaSection p {
+    font-size: 0.9rem;
+    color: #6B7280;
+    line-height: 1.7;
+    margin: 0 0 1.75rem;
+  }
+
+  .eventsCtaButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .eventsCtaPrimary {
+    background-color: #8FB369;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .eventsCtaSecondary {
+    background-color: transparent;
+    color: #5C7556;
+    border: 1.5px solid #8FB369;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    width: 100%;
+  }
+
+}
