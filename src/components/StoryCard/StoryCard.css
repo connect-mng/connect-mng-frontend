@@ -1,0 +1,74 @@
+.storyCard {
+	flex: 1 1 280px;
+	max-width: 380px;
+	background-color: #f5f7f3;
+	border-radius: 14px;
+	padding: 28px 26px;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+}
+
+.storyQuoteIcon {
+	color: #c2d4ad;
+	font-size: 26px;
+	margin-bottom: 14px;
+}
+
+.storyQuote {
+	font-size: 0.95rem;
+	color: #374151;
+	line-height: 1.6;
+	margin: 0 0 28px;
+	flex-grow: 1;
+}
+
+.storyAuthor {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.storyAvatar {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	font-size: 0.85rem;
+	color: #4f6b3a;
+	flex-shrink: 0;
+}
+
+.storyAuthorMeta {
+	display: flex;
+	flex-direction: column;
+}
+
+.storyAuthorName {
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: #1f2937;
+	margin: 0;
+}
+
+.storyAuthorRole {
+	font-size: 0.85rem;
+	color: #7bb36a;
+	margin: 0;
+}
+
+@media (max-width: 768px) {
+	.storyCard {
+		flex: 1 1 100%;
+		max-width: 460px;
+	}
+}
+
+@media (max-width: 480px) {
+	.storyCard {
+		padding: 24px 20px;
+	}
+}

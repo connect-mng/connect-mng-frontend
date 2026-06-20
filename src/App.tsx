@@ -19,6 +19,7 @@ import React from "react";
 import Resources from "./pages/Resources/Resources.jsx";
 import ResumeBlog from "./pages/Blogs/IndividualBlogs/ResumeBlog/ResumeBlog.jsx";
 import ResumeBoostProgram from "./pages/Programs/ProgramPages/ResumeBoost/ResumeBoost.jsx";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 import SupportPopup from "./components/SupportPopup/SupportPopup.jsx";
 import translations from "./common/translations";
 import Volunteer from "./pages/Volunteer/Volunteer.jsx";
@@ -42,6 +43,7 @@ export default function App() {
 				messages={translations[isEnglish ? "en" : "mn"]}
 			>
 				<Router>
+					<ScrollToTop />
 					<div className={"pinnedHeader"}>
 						<Header isEnglish={isEnglish} setIsEnglish={setIsEnglish} />
 						<Navigation />
