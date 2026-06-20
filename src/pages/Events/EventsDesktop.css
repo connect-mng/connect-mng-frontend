@@ -1,0 +1,413 @@
+@media (min-width: 769px) {
+
+  /* ===== HERO ===== */
+  .eventsHero {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 7rem 4rem 6rem;
+    color: #fff;
+  }
+
+  .eventsHero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(25, 50, 75, 0.78);
+    z-index: 0;
+  }
+
+  .eventsHeroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+  }
+
+  .eventsBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.875rem;
+    color: #fff;
+    margin-bottom: 1.25rem;
+  }
+
+  .eventsBadgeIcon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+
+  .eventsHero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+  }
+
+  .eventsHero p {
+    font-size: 1rem;
+    color: rgba(229, 231, 235, 0.95);
+    line-height: 1.75;
+    margin: 0 0 2rem;
+    max-width: 640px;
+  }
+
+  .eventsHeroButtons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .eventsHeroPrimary {
+    background-color: #8FB369;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .eventsHeroPrimary:hover {
+    background-color: #7a9c59;
+  }
+
+  .eventsHeroSecondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .eventsHeroSecondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* ===== SECTION HEADER ===== */
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.75rem;
+    color: #1F2937;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+  }
+
+  .sectionHeader p {
+    font-size: 0.95rem;
+    color: #6B7280;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  /* ===== UPCOMING EVENTS ===== */
+  .upcomingEventsSection {
+    padding: 4rem 3rem;
+    background-color: #fff;
+  }
+
+  .eventsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ===== UPCOMING EVENT CARD ===== */
+  .eventCard {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eventCardImageWrap {
+    position: relative;
+    height: 195px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .eventCardImageWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .eventCardBadges {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 0.4rem;
+  }
+
+  .eventCardBody {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .eventCardTitle {
+    font-size: 0.975rem;
+    font-weight: 600;
+    color: #1A5276;
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+  }
+
+  .eventMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .eventMeta span {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.8rem;
+    color: #6B7280;
+  }
+
+  .eventMeta span svg {
+    flex-shrink: 0;
+    color: #9CA3AF;
+  }
+
+  .eventCardDesc {
+    font-size: 0.8rem;
+    color: #6B7280;
+    line-height: 1.55;
+    margin: 0 0 0.9rem;
+    flex: 1;
+  }
+
+  .eventCardFooterRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.85rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid #F3F4F6;
+  }
+
+  .eventRegistered {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.77rem;
+    color: #6B7280;
+  }
+
+  .eventRegistered svg {
+    color: #9CA3AF;
+  }
+
+  .eventSpots {
+    font-size: 0.77rem;
+    color: #6B7280;
+  }
+
+  .registerNowBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    border: 1.5px solid #8FB369;
+    background: transparent;
+    color: #5C7556;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .registerNowBtn:hover {
+    background: #EDF5E1;
+  }
+
+  /* ===== PAST EVENTS ===== */
+  .pastEventsSection {
+    padding: 4rem 3rem;
+    background-color: #F9FAFB;
+  }
+
+  .pastEventCard {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pastEventImageWrap {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .pastEventImageWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pastEventCategoryBadge {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    background: rgba(30, 40, 55, 0.72);
+    color: #fff;
+    padding: 0.2rem 0.65rem;
+    border-radius: 0.375rem;
+    font-size: 0.74rem;
+    font-weight: 500;
+  }
+
+  .pastEventCardBody {
+    padding: 1.25rem;
+  }
+
+  .pastEventTitle {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+  }
+
+  .pastEventMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .pastEventMeta span {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.8rem;
+    color: #6B7280;
+  }
+
+  .pastEventMeta span svg {
+    flex-shrink: 0;
+    color: #9CA3AF;
+  }
+
+  .pastEventsButtonWrap {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .viewAllPastBtn {
+    background-color: #8FB369;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .viewAllPastBtn:hover {
+    background-color: #7a9c59;
+  }
+
+  /* ===== CTA SECTION ===== */
+  .eventsCtaSection {
+    padding: 5rem 2rem;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eventsCtaIcon {
+    color: #8FB369;
+    margin-bottom: 1.25rem;
+    stroke-width: 1.5;
+  }
+
+  .eventsCtaSection h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0 0 1rem;
+  }
+
+  .eventsCtaSection p {
+    font-size: 0.95rem;
+    color: #6B7280;
+    line-height: 1.75;
+    max-width: 580px;
+    margin: 0 0 2rem;
+  }
+
+  .eventsCtaButtons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .eventsCtaPrimary {
+    background-color: #8FB369;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .eventsCtaPrimary:hover {
+    background-color: #7a9c59;
+  }
+
+  .eventsCtaSecondary {
+    background-color: transparent;
+    color: #5C7556;
+    border: 1.5px solid #8FB369;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .eventsCtaSecondary:hover {
+    background: #EDF5E1;
+  }
+
+}
